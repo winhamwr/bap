@@ -19,21 +19,24 @@ urlpatterns = patterns('',
     url(r'^$', direct_to_template, {
         "template": "homepage.html",
     }, name="home"),
-    
+
     url(r'^admin/invite_user/$', 'signup_codes.views.admin_invite_user', name="admin_invite_user"),
     url(r'^account/signup/$', signup_view, name="acct_signup"),
-    
+
     (r'^about/', include('about.urls')),
     (r'^account/', include('account.urls')),
     (r'^openid/(.*)', PinaxConsumer()),
     (r'^profiles/', include('basic_profiles.urls')),
     (r'^notices/', include('notification.urls')),
     (r'^announcements/', include('announcements.urls')),
-    
+
     (r'^admin/(.*)', admin.site.root),
+
+    # BAP additions
+    (r'^cas/', include('cas_consumer.urls')),
 )
 
 if settings.SERVE_MEDIA:
-    urlpatterns += patterns('', 
+    urlpatterns += patterns('',
         (r'^site_media/(?P<path>.*)$', 'staticfiles.views.serve')
     )

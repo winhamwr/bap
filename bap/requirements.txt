@@ -16,3 +16,7 @@ django-pagination==1.0.5.1
 django-timezones==0.1.2
 django-ajax-validation==0.1.3
 django-uni-form==0.5.1
+
+
+# BAP additions
+-e git+git://github.com/Nitron/django-cas-consumer.git#egg=cas_consumer

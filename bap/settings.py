@@ -133,6 +133,8 @@ INSTALLED_APPS = (
     'about',
     'django.contrib.admin',
 
+    # BAP additions
+    'cas_consumer',
 )
 
 ABSOLUTE_URL_OVERRIDES = {
@@ -159,8 +161,14 @@ EMAIL_CONFIRMATION_DAYS = 2
 EMAIL_DEBUG = DEBUG
 CONTACT_EMAIL = "feedback@example.com"
 SITE_NAME = "IU BAP"
-LOGIN_URL = "/account/login/"
+LOGIN_URL = "/cas/login/"
+LOGOUT_URL = "/cas/logout/"
 LOGIN_REDIRECT_URLNAME = "what_next"
+
+# CAS settings
+CAS_BASE = 'https://cas.iu.edu/cas/'
+CAS_SERVICE = 'http://example.com/cas/login/'
+CAS_NEXT_DEFAULT = '/'
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.
