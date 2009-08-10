@@ -1,0 +1,31 @@
+
+#substripe {
+    /**height: 2.7em;**/
+}
+#tabhead .middle_logo {
+    position: absolute;
+    right: 120px;
+    top: 6px;
+}
+
+#subnav {
+    margin: 9px 0 0 0;
+}
+#subnav ul a:link, #subnav ul a:visited {
+    float: left;
+    margin: 0;
+}
+
+#body {
+    width: 760px;
+}
+
+#footer {
+    width: 760px;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

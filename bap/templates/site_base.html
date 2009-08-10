@@ -17,7 +17,7 @@
     {% endif %}
 {% endblock %}
 
-{% block logo_link_image %}<a href="{% url home %}"><img src="{{ MEDIA_URL }}pinax/images/logo.png" alt="Pinax"/></a>{% endblock %}
+{% block logo_link_image %}<a href="{% url home %}"><img src="{{ MEDIA_URL }}images/logo.gif" alt="BAP"/></a>{% endblock %}
 
 {% block right_tabs %}
     {% if user.is_authenticated %}
@@ -28,12 +28,22 @@
     {% endif %}
 {% endblock %}
 
+{% block middle_logo_link_image %}
+<a href="{% url home %}"><img src="{{ MEDIA_URL }}images/iub_crimson.gif" width="171px" height="44px" alt="BAP Logo"/></a>
+{% endblock %}
+
+{% block substripe %}<div>Beta Alpha Psi</div>{% endblock %}
+{% block subnav %}
+lorem ipsum
+{% endblock %}
+
 {% block footer %}
 <div class="legal">
-    {% trans "&copy; 2008 &lt;your company here&gt;" %}
-    - <a href="{% url about %}">{% trans "About" %}</a>
-    - <a href="{% url terms %}">{% trans "Terms of Service" %}</a>
-    - <a href="{% url privacy %}">{% trans "Privacy Policy" %}</a>
-    - <a href="{% url dmca %}">{% trans "DMCA Notice" %}</a>
+    <div class="centered"
+        {% trans "&copy; 2009 BAP - Indiana University" %}
+        - <a href="{% url about %}">{% trans "About Us" %}</a>
+        - <a href="{% url privacy %}">{% trans "Privacy Policy" %}</a>
+        - <a href="/content/contact">{% trans "Contact Us" %}</a>
+    </div>
 </div>
 {% endblock %}

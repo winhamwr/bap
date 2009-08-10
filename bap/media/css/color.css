@@ -1,0 +1,65 @@
+/* Using layout http://colorschemedesigner.com/#0221TsWfHpBpB
+.primary-1 { background-color: #7D120C } primary
+.primary-2 { background-color: #641F1C } dark red
+.primary-3 { background-color: #5A0905 } darker red
+.primary-4 { background-color: #B13731 } pastel pink
+.primary-5 { background-color: #B1504B } light pastel pink
+
+.secondary-a-1 { background-color: #7D410C }
+.secondary-a-2 { background-color: #643E1C }
+.secondary-a-3 { background-color: #5A2D05 }
+.secondary-a-4 { background-color: #B16D31 }
+.secondary-a-5 { background-color: #B17B4B }
+
+.secondary-b-1 { background-color: #08464C }
+.secondary-b-2 { background-color: #11393D }
+.secondary-b-3 { background-color: #043237 }
+.secondary-b-4 { background-color: #2A8B94 }
+.secondary-b-5 { background-color: #3F8C94 }
+
+.complement-1 { background-color: #096114 } green
+.complement-2 { background-color: #154E1C } dark green
+.complement-3 { background-color: #04460C } darker green
+.complement-4 { background-color: #2CA03B } bright green
+.complement-5 { background-color: #44A04F } bright pastel green
+
+charcoal #262626
+*/
+body {
+    background: #909797;
+}
+
+#tabhead {
+    background: #7D120C;
+}
+#tabhead .tab a, #tabhead .tab a:visited {
+    color: #262626; /* unselected tab text colour */
+}
+#tabhead .tab a:hover {
+    color: #04460C; /* unselected tab text hover colour */
+}
+#tabhead .tab div a {
+    background-color: #FCFCFC; /* unselected tab colour */
+}
+#tabhead .tab div a:hover {
+    background-color: #E6E6E6; /* unselected tab colour */
+}
+
+#substripe {
+    background: #3F8C94;
+    color: #FFFFFF;
+}
+
+#subnav {
+    background: #B13731;
+    color: #FFFFFF;
+    border-bottom: 1px solid #04460C;
+}
+
+#body {
+    background: #FFFFFF;
+}
+
+#footer {
+    background: #FFFFFF;
+}
