@@ -1,0 +1,29 @@
+ * Base site design - 5 (3.5)
+ * IU login integration - 5
+ * user management - 2
+ * basic CMS functionality - 3
+ * deployment - 2
+ * Home page with paypal link and "upcoming event" integration - 3
+ * Suggestion box with browsable interface - 6
+ * Ad space management (just changing an image or text) - 1
+ * Event management for professional/social/community events with a calendar and "upcoming events" - 8
+ * Attendance management for PE's with adminstrator management - 8
+ * Community service signups - 5
+ * Resume upload and display through profiles - 3
+ * Member spotlight + picture upload + "good standing" status - 4
+ * PE and CS hour reporting - 6
+ * Media management training (youtube + flickr) - 1
+ * .CSV export for hours - 2
+ * PD (page design)PE page - 1
+ * PD Community Service page - 1
+ * PD Social Events page - 1
+ * PD Pledges/Join us page - 1
+ * PD Member list - 1
+ * PD Officer list - 1
+ * PD Faculty List - 1
+ * PD About Page - 1
+ * PD Multimedia Page - 1
+
+Completed:
+ * set up - 3(5) 3/25
+

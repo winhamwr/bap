@@ -1,0 +1,29 @@
+ = Installation =
+
+On a fresh ubuntu 8.04 box. The variable MYPROJ will probably be something like bap
+
+ 1. Download this file: http://svn.pinaxproject.com/pinax/trunk/scripts/pinax-boot.py and stick it in your workspace
+ 2. run:
+{{{
+python pinax-boot.py --development ~/.virtualenvs/MYPROJ
+}}}
+ 3. run:
+{{{
+source MYPROJ-env/bin/activate
+}}}
+ 4. Install PIL:
+   * Download and extract: http://effbot.org/downloads/Imaging-1.1.6.tar.gz
+   * Browse to the extracted folder and run
+{{{
+python setup.py install
+}}}
+ 5. Get the external apps using pip.
+{{{
+}}}
+ 6. Get the project source
+{{{
+bzr co ...
+}}}
+ 7. Syncdb and set up the db
+ 8. Setup apache
+ 9. Make a symlink from the docs/buildout.cfg to MYPROJ-env/buildout.cfg and run buildout from the virtualenv root
