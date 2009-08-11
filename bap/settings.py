@@ -170,6 +170,21 @@ CAS_BASE = 'https://cas.iu.edu/cas/'
 CAS_SERVICE = 'http://example.com/cas/login/'
 CAS_NEXT_DEFAULT = '/'
 
+# Customized weird CAS settings
+# A lot of horrible hacks because of IU's implementation: http://kb.iu.edu/data/atfc.html
+
+# They call the service parameter 'casurl' and prepend 'cas' to 'ticket'
+CAS_SERVICE_LABEL = 'casurl'
+CAS_TICKET_LABEL = 'casticket'
+# IU requires cassvc with login and validate requests and they require it to be the first GET variable
+CAS_EXTRA_PARAMS = {'cassvc': 'IU'}
+# IU doesn't support the urls with slashes after the names
+CAS_LOGIN_URL = 'login'
+CAS_VALIDATE_URL = 'validate'
+CAS_LOGOUT_URL = 'logout'
+# IU doesn't support properly urlencoded values
+CAS_URLENCODE_PARAMS = False
+
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.
 try:

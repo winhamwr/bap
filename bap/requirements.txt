@@ -19,4 +19,4 @@ django-uni-form==0.5.1
 
 
 # BAP additions
--e git+git://github.com/Nitron/django-cas-consumer.git#egg=cas_consumer
+-e git+git://github.com/winhamwr/django-cas-consumer.git#egg=cas_consumer
