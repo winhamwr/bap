@@ -24,7 +24,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'    # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'ado_mssql'.
-DATABASE_NAME = 'dev.db'       # Or path to database file if using sqlite3.
+DATABASE_NAME = os.path.join(os.path.dirname(__file__), 'dev.db')       # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
@@ -141,6 +141,8 @@ INSTALLED_APPS = (
 ABSOLUTE_URL_OVERRIDES = {
     "auth.user": lambda o: "/profiles/%s/" % o.username,
 }
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',
+                           'cas_consumer.backends.CASBackend')
 
 MARKUP_FILTER_FALLBACK = 'none'
 MARKUP_CHOICES = (
@@ -168,7 +170,7 @@ LOGIN_REDIRECT_URLNAME = "what_next"
 
 # CAS settings
 CAS_BASE = 'https://cas.iu.edu/cas/'
-CAS_SERVICE = 'http://example.com/cas/login/'
+CAS_SERVICE = 'http://bap.weswinham.com/cas/login/'
 CAS_NEXT_DEFAULT = '/'
 
 # Customized weird CAS settings
