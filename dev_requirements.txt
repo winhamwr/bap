@@ -1,0 +1,1 @@
+-e git+git://github.com/bitprophet/fabric.git@0.9b1#egg=fabric
