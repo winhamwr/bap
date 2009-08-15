@@ -3,6 +3,7 @@
 
 import os.path
 import pinax
+from odict import odict
 
 PINAX_ROOT = os.path.abspath(os.path.dirname(pinax.__file__))
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -177,7 +178,7 @@ CAS_NEXT_DEFAULT = '/'
 CAS_SERVICE_LABEL = 'casurl'
 CAS_TICKET_LABEL = 'casticket'
 # IU requires cassvc with login and validate requests and they require it to be the first GET variable
-CAS_EXTRA_PARAMS = {'cassvc': 'IU'}
+CAS_EXTRA_PARAMS = odict({'cassvc': 'IU'})
 # IU doesn't support the urls with slashes after the names
 CAS_LOGIN_URL = 'login'
 CAS_VALIDATE_URL = 'validate'
