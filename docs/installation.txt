@@ -1,29 +1,29 @@
  = Installation =
 
-On a fresh ubuntu 8.04 box. The variable MYPROJ will probably be something like bap
-
- 1. Download this file: http://svn.pinaxproject.com/pinax/trunk/scripts/pinax-boot.py and stick it in your workspace
- 2. run:
+On a fresh ubuntu 8.04 box, install the following:
 {{{
-python pinax-boot.py --development ~/.virtualenvs/MYPROJ
+sudo apt-get install python-setuptools subversion git-core
+}}}
+{{{
+sudo easy_install virtualenv virtualenvwrapper
+}}}
+
+  1. Checkout the source to /var/www/bap
+  2. run:
+{{{
+python /var/www/bap/pinax-boot.py --development ~/.virtualenvs/bap
 }}}
  3. run:
 {{{
-source MYPROJ-env/bin/activate
-}}}
- 4. Install PIL:
-   * Download and extract: http://effbot.org/downloads/Imaging-1.1.6.tar.gz
-   * Browse to the extracted folder and run
-{{{
-python setup.py install
+source ~/.virtualenvs/bap/bin/activate
 }}}
  5. Get the external apps using pip.
 {{{
+pip install -E ~/.virtualenvs/bap -r /var/www/bap/requirements.txt
 }}}
- 6. Get the project source
+
+ 7. sync the db
 {{{
-bzr co ...
+/var/www/bap/bap/manage.py syncdb
 }}}
- 7. Syncdb and set up the db
  8. Setup apache
- 9. Make a symlink from the docs/buildout.cfg to MYPROJ-env/buildout.cfg and run buildout from the virtualenv root
