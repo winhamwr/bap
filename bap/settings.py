@@ -181,7 +181,13 @@ CAS_NEXT_DEFAULT = '/'
 CAS_SERVICE_LABEL = 'casurl'
 CAS_TICKET_LABEL = 'casticket'
 # IU requires cassvc with login and validate requests and they require it to be the first GET variable
-CAS_EXTRA_PARAMS = odict({'cassvc': 'IU'})
+CAS_EXTRA_LOGIN_PARAMS = odict((
+    ('cassvc', 'IU'),
+    (CAS_SERVICE_LABEL, None)))
+CAS_EXTRA_VALIDATION_PARAMS = odict((
+    ('cassvc', 'IU'),
+    (CAS_TICKET_LABEL, None),
+    (CAS_SERVICE_LABEL, None)))
 # IU doesn't support the urls with slashes after the names
 CAS_LOGIN_URL = 'login'
 CAS_VALIDATE_URL = 'validate'
