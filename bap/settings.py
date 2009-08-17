@@ -82,6 +82,7 @@ MIDDLEWARE_CLASSES = (
     'pinax.middleware.security.HideSensistiveFieldsMiddleware',
     # For django-page-cms
     'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.http.SetRemoteAddrFromForwardedFor',
 )
 
 ROOT_URLCONF = 'bap.urls'
@@ -206,9 +207,10 @@ CAS_LOGOUT_URL = 'logout'
 CAS_URLENCODE_PARAMS = False
 
 def update_email(user):
-    if not user.email:
+    if not user.email or len(user.email) < 4:
         user.email = '%s@indiana.edu' % user.username
         user.save()
+
 CAS_USERINFO_CALLBACK = update_email
 
 # For django-page-cms

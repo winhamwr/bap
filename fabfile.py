@@ -5,6 +5,7 @@ env.roledefs['webservers'] = ['weswinham.com']
 
 @roles('webservers')
 def deploy():
+    # sudo('ln -s /home/wes/.virtualenvs/bap/lib/python2.6/site-packages/django/contrib/admin/media /var/www/bap/bap/media/admin')
     sudo('mkdir -p /var/www/bap')
     sudo('chown wes:bap -R /var/www/bap')
     rsync_project(remote_dir='/var/www', exclude=['*.pyc', '.git', 'dev.db'])
