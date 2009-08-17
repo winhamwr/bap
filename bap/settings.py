@@ -80,6 +80,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.doc.XViewMiddleware',
     'pagination.middleware.PaginationMiddleware',
     'pinax.middleware.security.HideSensistiveFieldsMiddleware',
+    # For django-page-cms
+    'django.middleware.locale.LocaleMiddleware',
 )
 
 ROOT_URLCONF = 'bap.urls'
@@ -103,6 +105,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "announcements.context_processors.site_wide_announcements",
     "account.context_processors.openid",
     "account.context_processors.account",
+
+    # For django-page-cms
+    "pages.context_processors.media",
 )
 
 INSTALLED_APPS = (
@@ -136,6 +141,11 @@ INSTALLED_APPS = (
 
     # BAP additions
     'cas_consumer',
+
+    # For cms functionality
+    'mptt',
+    'tagging',
+    'pages',
 )
 
 ABSOLUTE_URL_OVERRIDES = {
@@ -194,6 +204,17 @@ CAS_VALIDATE_URL = 'validate'
 CAS_LOGOUT_URL = 'logout'
 # IU doesn't support properly urlencoded values
 CAS_URLENCODE_PARAMS = False
+
+# For django-page-cms
+CACHE_BACKEND = "locmem:///?max_entries=5000"
+PAGE_PERMISSION = False # Disable advanced hierarchic permissions
+PAGE_TAGGING = False # Disable page tagging
+
+DEFAULT_PAGE_TEMPLATE = 'pages/index.html'
+PAGE_TEMPLATES = (
+    ('pages/nice.html', 'nice one'),
+    ('pages/cool.html', 'cool one'),
+)
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.

@@ -1,7 +1,9 @@
  * Base site design - 5 (3.5)
  * IU login integration - 5
+   * Get django admin working with CAS
  * user management - 2
  * basic CMS functionality - 3
+   * Figure out languages
  * deployment - 2
  * Home page with paypal link and "upcoming event" integration - 3
  * Suggestion box with browsable interface - 6
