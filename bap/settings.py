@@ -205,6 +205,12 @@ CAS_LOGOUT_URL = 'logout'
 # IU doesn't support properly urlencoded values
 CAS_URLENCODE_PARAMS = False
 
+def update_email(user):
+    if not user.email:
+        user.email = '%s@indiana.edu' % user.username
+        user.save()
+CAS_USERINFO_CALLBACK = update_email
+
 # For django-page-cms
 CACHE_BACKEND = "locmem:///?max_entries=5000"
 PAGE_PERMISSION = False # Disable advanced hierarchic permissions
