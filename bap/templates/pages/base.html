@@ -1,11 +1,14 @@
 {% extends "site_base.html" %}
 {% load cache pages_tags %}
+{% load_pages %}
 
 {% block head_title %}
     {% if current_page %}
         {% show_content current_page "title" %}
     {% endif %}
 {% endblock %}
+
+{% block subnav %}{% if current_page %}{% pages_menu current_page %}{% endif %}{% endblock %}
 
 {% block content %}{{ block.super }}
     {% placeholder body_content on current_page with WYMEditor %}

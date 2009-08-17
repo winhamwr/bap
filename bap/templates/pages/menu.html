@@ -1,0 +1,10 @@
+{% load pages_tags cache %}
+{% if children %}
+<ul>
+    {% for child in children %}
+        <li><a href="{% show_absolute_url child %} ">{{ child.get_title }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+&nbsp;
+{% endif %}

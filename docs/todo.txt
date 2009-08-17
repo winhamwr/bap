@@ -4,6 +4,7 @@
  * user management - 2
  * basic CMS functionality - 3
    * Figure out languages
+   * Add dynamic menu containing all children of home for the footer
  * deployment - 2
  * Home page with paypal link and "upcoming event" integration - 3
  * Suggestion box with browsable interface - 6
