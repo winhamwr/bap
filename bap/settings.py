@@ -210,10 +210,9 @@ CACHE_BACKEND = "locmem:///?max_entries=5000"
 PAGE_PERMISSION = False # Disable advanced hierarchic permissions
 PAGE_TAGGING = False # Disable page tagging
 
-DEFAULT_PAGE_TEMPLATE = 'pages/index.html'
+DEFAULT_PAGE_TEMPLATE = 'pages/base.html'
 PAGE_TEMPLATES = (
-    ('pages/nice.html', 'nice one'),
-    ('pages/cool.html', 'cool one'),
+    ('pages/base.html', 'Standard Info Page'),
 )
 
 # local_settings.py can be used to override environment-specific settings

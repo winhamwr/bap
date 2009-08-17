@@ -1,0 +1,21 @@
+{% extends "site_base.html" %}
+{% load cache pages_tags %}
+
+{% block head_title %}
+    {% if current_page %}
+        {% show_content current_page "title" %}
+    {% endif %}
+{% endblock %}
+
+{% block content %}{{ block.super }}
+    {% placeholder body_content on current_page with WYMEditor %}
+{% endblock %}
+
+{% block extra_content %}
+{% if user.is_authenticated and user.is_staff %}
+<div class="rounded">
+    <p>This page was last edited: {{ current_page.last_modification_date }}</p>
+    <p><a href="{% url admin:pages_page_change current_page.pk %}">Edit</a> this page</p>
+</div>
+{% endif %}
+{% endblock %}

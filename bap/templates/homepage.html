@@ -1,16 +1,37 @@
-{% extends "site_base.html" %}
+{% extends "pages/base.html" %}
 
-{% load i18n %}
-{% load webdesign %}
+{% load cache pages_tags %}
+{% load_pages %}
 
-{% block head_title %}{% trans "Welcome" %}{% endblock %}
-
-{% block tab_id %}id="home_tab"{% endblock %}
+{% get_content "home" "title" as title %}
+{% block head_title %}
+{% if title %}
+    {% show_content "home" "title" %}
+{% else %}
+    Welcome
+{% endif %}
+{% endblock %}
 
 {% block body %}
-    {% lorem 3 p random %}
+{% get_content "home" "body_content" as body_content %}
+{% if body_content %}
+    {% show_content "home" "body_content" %}
+{% else %}
+    {% if user.is_authenticated and user.is_staff %}
+        <p>You must configure a root-level page with the the slug "home" to customize this page.<p>
+        <p>To do this:
+            <ol>
+                <li>Go to the <a href="{% url admin:pages_page_changelist %}">Pages</a> section of the <a href="{% url admin:index %}">admin</a> page</li>
+                <li>Create a page at the root level (with the &quot;Add page&quot; button in the top right) that has a slug of &quot;home&quot;</li>
+                <li>If a root page already exists, click on that page to edit it and ensure that the slug is &quot;home&quot;</li>
+                <li>Add an <a href="{% url admin:pages_pagealias_changelist %}">Alias</a> through the admin page that aliases &quot;home&quot; to &quot;/&quot;</li>
+            </ol>
+        </p>
+    {% else %}
+        Welcome to the {{ site_name }} homepage.
+    {% endif %}
+{% endif %}
+{% endblock %}
 
-        {% url what_next as what_next_url %}
-        <p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}">What Next</a>?{% endblocktrans %}</p>
-
+{% block extra_content %}
 {% endblock %}

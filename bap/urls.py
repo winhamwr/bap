@@ -16,9 +16,9 @@ else:
 
 
 urlpatterns = patterns('',
-    #url(r'^$', direct_to_template, {
-    #    "template": "homepage.html",
-    #}, name="home"),
+    url(r'^$', direct_to_template, {
+        "template": "homepage.html",
+    }, name="home"),
 
     url(r'^admin/invite_user/$', 'signup_codes.views.admin_invite_user', name="admin_invite_user"),
     url(r'^account/signup/$', signup_view, name="acct_signup"),
@@ -30,14 +30,13 @@ urlpatterns = patterns('',
     (r'^notices/', include('notification.urls')),
     (r'^announcements/', include('announcements.urls')),
 
-    (r'^admin/(.*)', admin.site.root),
+    (r'^admin/', include(admin.site.urls)),
 
     # BAP additions
     (r'^cas/', include('cas_consumer.urls')),
 
     # For django-page-cms
-    url(r'^$', 'pages.views.details', name='pages-root'),
-    url(r'^p/(?P<path>.*)$', 'pages.views.details', name='pages-details-by-path'),
+    (r'^p/', include('pages.urls')),
 )
 
 if settings.SERVE_MEDIA:
