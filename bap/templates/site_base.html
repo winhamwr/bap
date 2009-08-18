@@ -3,6 +3,7 @@
 {% load i18n %}
 {% load openid_tags %}
 {% load ifsetting_tag %}
+{% load cache pages_tags %}
 
 {% block extra_head_base %}
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/site_tabs.css" />
@@ -41,9 +42,9 @@ lorem ipsum
 <div class="legal">
     <div class="centered"
         {% trans "&copy; 2009 BAP - Indiana University" %}
-        - <a href="{% url about %}">{% trans "About Us" %}</a>
-        - <a href="{% url privacy %}">{% trans "Privacy Policy" %}</a>
-        - <a href="/content/contact">{% trans "Contact Us" %}</a>
+        - <a href="{% show_absolute_url 'about' %}">{% show_content 'about' 'title' %}</a>
+        - <a href="{% show_absolute_url 'privacy' %}">{% show_content 'privacy' 'title' %}</a>
+        - <a href="{% show_absolute_url 'contact' %}">{% show_content 'contact' 'title' %}</a>
     </div>
 </div>
 {% endblock %}
