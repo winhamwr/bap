@@ -218,10 +218,16 @@ CACHE_BACKEND = "locmem:///?max_entries=5000"
 PAGE_PERMISSION = False # Disable advanced hierarchic permissions
 PAGE_TAGGING = False # Disable page tagging
 
+LANGUAGES = (('en', 'English'),)
+PAGE_HIDE_ROOT_SLUG = True
+
 DEFAULT_PAGE_TEMPLATE = 'pages/base.html'
 PAGE_TEMPLATES = (
     ('pages/base.html', 'Standard Info Page'),
 )
+
+# For BAP
+HOME_PAGE_ID = 1
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.

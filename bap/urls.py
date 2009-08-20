@@ -7,6 +7,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 from account.openid_consumer import PinaxConsumer
+from pages.models import Page
 
 
 if settings.ACCOUNT_OPEN_SIGNUP:
@@ -16,8 +17,15 @@ else:
 
 
 urlpatterns = patterns('',
+    # Using context requirements from pages.views.details so that we can use the pages templatetags
     url(r'^$', direct_to_template, {
         "template": "homepage.html",
+        'extra_context': {
+            'current_page': Page.objects.get(pk=settings.HOME_PAGE_ID),
+            'lang': 'en',
+            'path': None,
+            'pages': Page.objects.navigation().order_by("tree_id"),
+        },
     }, name="home"),
 
     url(r'^admin/invite_user/$', 'signup_codes.views.admin_invite_user', name="admin_invite_user"),
