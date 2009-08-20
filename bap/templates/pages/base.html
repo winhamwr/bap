@@ -10,7 +10,7 @@
 
 {% block subnav %}{% if current_page %}{% pages_menu current_page %}{% endif %}{% endblock %}
 
-{% block content %}{{ block.super }}
+{% block body %}{{ block.super }}
     {% placeholder body_content on current_page with WYMEditor %}
 {% endblock %}
 

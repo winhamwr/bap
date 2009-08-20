@@ -2,7 +2,7 @@
 {% if children %}
 <ul>
     {% for child in children %}
-        <li><a href="{% show_absolute_url child %} ">{{ child.get_title }}</a></li>
+        <li><a href="{% show_absolute_url child %} ">{% show_content child "slug" %}</a></li>
     {% endfor %}
 </ul>
 {% else %}
