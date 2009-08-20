@@ -21,7 +21,7 @@ urlpatterns = patterns('',
     url(r'^$', direct_to_template, {
         "template": "homepage.html",
         'extra_context': {
-            'current_page': Page.objects.get(pk=settings.HOME_PAGE_ID),
+            'current_page': Page.objects.root()[0],
             'lang': 'en',
             'path': None,
             'pages': Page.objects.navigation().order_by("tree_id"),
