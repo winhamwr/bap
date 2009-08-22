@@ -1,332 +1,387 @@
 [
     {
-        "pk": 1,
-        "model": "pages.page",
+        "pk": 1, 
+        "model": "pages.page", 
         "fields": {
-            "status": 1,
-            "rght": 6,
-            "parent": null,
-            "author": 1,
-            "redirect_to": null,
+            "status": 1, 
+            "rght": 8, 
+            "parent": null, 
+            "author": 1, 
+            "redirect_to": null, 
             "sites": [
                 1
-            ],
-            "creation_date": "2009-08-20 00:47:28",
-            "lft": 1,
-            "publication_end_date": null,
-            "template": "pages/base.html",
-            "tree_id": 1,
-            "last_modification_date": "2009-08-20 00:47:28",
-            "publication_date": "2009-08-20 00:47:28",
+            ], 
+            "creation_date": "2009-08-20 00:47:28", 
+            "lft": 1, 
+            "publication_end_date": null, 
+            "template": "pages/base.html", 
+            "tree_id": 1, 
+            "last_modification_date": "2009-08-20 00:47:28", 
+            "publication_date": "2009-08-20 00:47:28", 
             "level": 0
         }
-    },
+    }, 
     {
-        "pk": 5,
-        "model": "pages.page",
+        "pk": 5, 
+        "model": "pages.page", 
         "fields": {
-            "status": 1,
-            "rght": 3,
-            "parent": 1,
-            "author": 1,
-            "redirect_to": null,
+            "status": 1, 
+            "rght": 3, 
+            "parent": 1, 
+            "author": 1, 
+            "redirect_to": null, 
             "sites": [
                 1
-            ],
-            "creation_date": "2009-08-20 00:52:57",
-            "lft": 2,
-            "publication_end_date": null,
-            "template": "pages/base.html",
-            "tree_id": 1,
-            "last_modification_date": "2009-08-20 00:52:57",
-            "publication_date": "2009-08-20 00:52:57",
+            ], 
+            "creation_date": "2009-08-20 00:52:57", 
+            "lft": 2, 
+            "publication_end_date": null, 
+            "template": "pages/base.html", 
+            "tree_id": 1, 
+            "last_modification_date": "2009-08-20 00:52:57", 
+            "publication_date": "2009-08-20 00:52:57", 
             "level": 1
         }
-    },
+    }, 
     {
-        "pk": 6,
-        "model": "pages.page",
+        "pk": 6, 
+        "model": "pages.page", 
         "fields": {
-            "status": 1,
-            "rght": 5,
-            "parent": 1,
-            "author": 1,
-            "redirect_to": null,
+            "status": 1, 
+            "rght": 5, 
+            "parent": 1, 
+            "author": 1, 
+            "redirect_to": null, 
             "sites": [
                 1
-            ],
-            "creation_date": "2009-08-20 00:53:17",
-            "lft": 4,
-            "publication_end_date": null,
-            "template": "pages/base.html",
-            "tree_id": 1,
-            "last_modification_date": "2009-08-20 00:53:17",
-            "publication_date": "2009-08-20 00:53:17",
+            ], 
+            "creation_date": "2009-08-20 00:53:17", 
+            "lft": 4, 
+            "publication_end_date": null, 
+            "template": "pages/base.html", 
+            "tree_id": 1, 
+            "last_modification_date": "2009-08-20 00:53:17", 
+            "publication_date": "2009-08-20 00:53:17", 
             "level": 1
         }
-    },
+    }, 
     {
-        "pk": 2,
-        "model": "pages.page",
+        "pk": 7, 
+        "model": "pages.page", 
         "fields": {
-            "status": 1,
-            "rght": 2,
-            "parent": null,
-            "author": 1,
-            "redirect_to": null,
+            "status": 1, 
+            "rght": 7, 
+            "parent": 1, 
+            "author": 1, 
+            "redirect_to": null, 
             "sites": [
                 1
-            ],
-            "creation_date": "2009-08-20 00:48:02",
-            "lft": 1,
-            "publication_end_date": null,
-            "template": "pages/base.html",
-            "tree_id": 2,
-            "last_modification_date": "2009-08-20 00:48:02",
-            "publication_date": "2009-08-20 00:48:02",
-            "level": 0
+            ], 
+            "creation_date": "2009-08-21 21:59:34", 
+            "lft": 6, 
+            "publication_end_date": null, 
+            "template": "pages/base.html", 
+            "tree_id": 1, 
+            "last_modification_date": "2009-08-21 22:01:17", 
+            "publication_date": "2009-08-21 22:00:21", 
+            "level": 1
         }
-    },
+    }, 
     {
-        "pk": 3,
-        "model": "pages.page",
+        "pk": 2, 
+        "model": "pages.page", 
         "fields": {
-            "status": 1,
-            "rght": 2,
-            "parent": null,
-            "author": 1,
-            "redirect_to": null,
+            "status": 1, 
+            "rght": 2, 
+            "parent": null, 
+            "author": 1, 
+            "redirect_to": null, 
             "sites": [
                 1
-            ],
-            "creation_date": "2009-08-20 00:48:27",
-            "lft": 1,
-            "publication_end_date": null,
-            "template": "pages/base.html",
-            "tree_id": 3,
-            "last_modification_date": "2009-08-20 00:48:27",
-            "publication_date": "2009-08-20 00:48:27",
+            ], 
+            "creation_date": "2009-08-20 00:48:02", 
+            "lft": 1, 
+            "publication_end_date": null, 
+            "template": "pages/base.html", 
+            "tree_id": 2, 
+            "last_modification_date": "2009-08-20 00:48:02", 
+            "publication_date": "2009-08-20 00:48:02", 
             "level": 0
         }
-    },
+    }, 
     {
-        "pk": 4,
-        "model": "pages.page",
+        "pk": 3, 
+        "model": "pages.page", 
         "fields": {
-            "status": 1,
-            "rght": 2,
-            "parent": null,
-            "author": 1,
-            "redirect_to": null,
+            "status": 1, 
+            "rght": 2, 
+            "parent": null, 
+            "author": 1, 
+            "redirect_to": null, 
             "sites": [
                 1
-            ],
-            "creation_date": "2009-08-20 00:48:57",
-            "lft": 1,
-            "publication_end_date": null,
-            "template": "pages/base.html",
-            "tree_id": 4,
-            "last_modification_date": "2009-08-20 00:48:57",
-            "publication_date": "2009-08-20 00:48:57",
+            ], 
+            "creation_date": "2009-08-20 00:48:27", 
+            "lft": 1, 
+            "publication_end_date": null, 
+            "template": "pages/base.html", 
+            "tree_id": 3, 
+            "last_modification_date": "2009-08-20 00:48:27", 
+            "publication_date": "2009-08-20 00:48:27", 
             "level": 0
         }
-    },
+    }, 
     {
-        "pk": 1,
-        "model": "pages.content",
+        "pk": 4, 
+        "model": "pages.page", 
         "fields": {
-            "body": "Home",
-            "type": "title",
-            "page": 1,
-            "language": "en",
+            "status": 1, 
+            "rght": 2, 
+            "parent": null, 
+            "author": 1, 
+            "redirect_to": null, 
+            "sites": [
+                1
+            ], 
+            "creation_date": "2009-08-20 00:48:57", 
+            "lft": 1, 
+            "publication_end_date": null, 
+            "template": "pages/base.html", 
+            "tree_id": 4, 
+            "last_modification_date": "2009-08-20 00:48:57", 
+            "publication_date": "2009-08-20 00:48:57", 
+            "level": 0
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "pages.content", 
+        "fields": {
+            "body": "Home", 
+            "type": "title", 
+            "page": 1, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:47:28"
         }
-    },
+    }, 
     {
-        "pk": 2,
-        "model": "pages.content",
+        "pk": 2, 
+        "model": "pages.content", 
         "fields": {
-            "body": "home",
-            "type": "slug",
-            "page": 1,
-            "language": "en",
+            "body": "home", 
+            "type": "slug", 
+            "page": 1, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:47:28"
         }
-    },
+    }, 
     {
-        "pk": 3,
-        "model": "pages.content",
+        "pk": 3, 
+        "model": "pages.content", 
         "fields": {
-            "body": "<p>Home content</p>",
-            "type": "body_content",
-            "page": 1,
-            "language": "en",
+            "body": "<p>Home content</p>", 
+            "type": "body_content", 
+            "page": 1, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:47:28"
         }
-    },
+    }, 
     {
-        "pk": 4,
-        "model": "pages.content",
+        "pk": 4, 
+        "model": "pages.content", 
         "fields": {
-            "body": "About Us",
-            "type": "title",
-            "page": 2,
-            "language": "en",
+            "body": "About Us", 
+            "type": "title", 
+            "page": 2, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:48:02"
         }
-    },
+    }, 
     {
-        "pk": 5,
-        "model": "pages.content",
+        "pk": 5, 
+        "model": "pages.content", 
         "fields": {
-            "body": "about",
-            "type": "slug",
-            "page": 2,
-            "language": "en",
+            "body": "about", 
+            "type": "slug", 
+            "page": 2, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:48:02"
         }
-    },
+    }, 
     {
-        "pk": 6,
-        "model": "pages.content",
+        "pk": 6, 
+        "model": "pages.content", 
         "fields": {
-            "body": "<p><strong>About Beta Alpha Psi</strong></p><p>Beta Alpha Psi is a national accounting honorary fraternity that strives to recognize those accounting majors who have maintained high academic standards. Founded in 1919 on the University of Illinois campus, Beta Alpha Psi was established as an honorary and professional fraternity for the accounting profession. Since its inception, the organization has developed into a major national scholastic and professional fraternity.</p><p>Its primary objectives are (1) to promote the study and practice of accounting, (2) to provide opportunities for self-development and association among members and practicing accountants, and (3) to encourage a sense of ethical, social, and public responsibility among students of accounting. Beta Alpha Psi recognizes six key principles of professional and personal conduct: intellectual integrity, loyal service, respect for confidence, professional bearing, responsible behavior, and personal appearance. The organization believes that adherence to these principles will lead to a successful career in accounting.</p><p>Founded in 1957, the Beta Alpha Psi chapter at Indiana University is a national scholastic and professional accounting fraternity. The primary objective of the fraternity is to encourage and give recognition to scholastic and professional excellence in the field of accounting. This includes promoting the study and practice of accounting, providing opportunities for self-development and association among members and practicing accountants, and encouraging a sense of ethical, social, and public responsibility.</p><p>Association among members is fostered through the wide variety of committees within Beta Alpha Psi, each providing unique opportunities for involvement with other students and the community. At Indiana University, the fraternity also invites recruiters to campus to give students a greater look at the opportunities and issues in the accounting profession. The annual Jobs Fair and Recruiting Banquet allows member and pledges the chance to speak with professionals on a one-on-one basis.</p>",
-            "type": "body_content",
-            "page": 2,
-            "language": "en",
+            "body": "<p><strong>About Beta Alpha Psi</strong></p><p>Beta Alpha Psi is a national accounting honorary fraternity that strives to recognize those accounting majors who have maintained high academic standards. Founded in 1919 on the University of Illinois campus, Beta Alpha Psi was established as an honorary and professional fraternity for the accounting profession. Since its inception, the organization has developed into a major national scholastic and professional fraternity.</p><p>Its primary objectives are (1) to promote the study and practice of accounting, (2) to provide opportunities for self-development and association among members and practicing accountants, and (3) to encourage a sense of ethical, social, and public responsibility among students of accounting. Beta Alpha Psi recognizes six key principles of professional and personal conduct: intellectual integrity, loyal service, respect for confidence, professional bearing, responsible behavior, and personal appearance. The organization believes that adherence to these principles will lead to a successful career in accounting.</p><p>Founded in 1957, the Beta Alpha Psi chapter at Indiana University is a national scholastic and professional accounting fraternity. The primary objective of the fraternity is to encourage and give recognition to scholastic and professional excellence in the field of accounting. This includes promoting the study and practice of accounting, providing opportunities for self-development and association among members and practicing accountants, and encouraging a sense of ethical, social, and public responsibility.</p><p>Association among members is fostered through the wide variety of committees within Beta Alpha Psi, each providing unique opportunities for involvement with other students and the community. At Indiana University, the fraternity also invites recruiters to campus to give students a greater look at the opportunities and issues in the accounting profession. The annual Jobs Fair and Recruiting Banquet allows member and pledges the chance to speak with professionals on a one-on-one basis.</p>", 
+            "type": "body_content", 
+            "page": 2, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:48:02"
         }
-    },
+    }, 
     {
-        "pk": 7,
-        "model": "pages.content",
+        "pk": 7, 
+        "model": "pages.content", 
         "fields": {
-            "body": "Privacy Policy",
-            "type": "title",
-            "page": 3,
-            "language": "en",
+            "body": "Privacy Policy", 
+            "type": "title", 
+            "page": 3, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:48:27"
         }
-    },
+    }, 
     {
-        "pk": 8,
-        "model": "pages.content",
+        "pk": 8, 
+        "model": "pages.content", 
         "fields": {
-            "body": "privacy",
-            "type": "slug",
-            "page": 3,
-            "language": "en",
+            "body": "privacy", 
+            "type": "slug", 
+            "page": 3, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:48:27"
         }
-    },
+    }, 
     {
-        "pk": 9,
-        "model": "pages.content",
+        "pk": 9, 
+        "model": "pages.content", 
         "fields": {
-            "body": "<p>Privacy Policy</p>",
-            "type": "body_content",
-            "page": 3,
-            "language": "en",
+            "body": "<p>Privacy Policy</p>", 
+            "type": "body_content", 
+            "page": 3, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:48:27"
         }
-    },
+    }, 
     {
-        "pk": 10,
-        "model": "pages.content",
+        "pk": 10, 
+        "model": "pages.content", 
         "fields": {
-            "body": "Contact",
-            "type": "title",
-            "page": 4,
-            "language": "en",
+            "body": "Contact", 
+            "type": "title", 
+            "page": 4, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:48:57"
         }
-    },
+    }, 
     {
-        "pk": 11,
-        "model": "pages.content",
+        "pk": 11, 
+        "model": "pages.content", 
         "fields": {
-            "body": "contact",
-            "type": "slug",
-            "page": 4,
-            "language": "en",
+            "body": "contact", 
+            "type": "slug", 
+            "page": 4, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:48:57"
         }
-    },
+    }, 
     {
-        "pk": 12,
-        "model": "pages.content",
+        "pk": 12, 
+        "model": "pages.content", 
         "fields": {
-            "body": "<p>Email: <a href=\"mailto:bap@indiana.edu\">bap@indiana.edu</a></p>",
-            "type": "body_content",
-            "page": 4,
-            "language": "en",
+            "body": "<p>Email: <a href=\"mailto:bap@indiana.edu\">bap@indiana.edu</a></p>", 
+            "type": "body_content", 
+            "page": 4, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:48:57"
         }
-    },
+    }, 
     {
-        "pk": 13,
-        "model": "pages.content",
+        "pk": 13, 
+        "model": "pages.content", 
         "fields": {
-            "body": "Join Us",
-            "type": "title",
-            "page": 5,
-            "language": "en",
+            "body": "Join Us", 
+            "type": "title", 
+            "page": 5, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:52:57"
         }
-    },
+    }, 
     {
-        "pk": 14,
-        "model": "pages.content",
+        "pk": 14, 
+        "model": "pages.content", 
         "fields": {
-            "body": "join",
-            "type": "slug",
-            "page": 5,
-            "language": "en",
+            "body": "join", 
+            "type": "slug", 
+            "page": 5, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:52:57"
         }
-    },
+    }, 
     {
-        "pk": 15,
-        "model": "pages.content",
+        "pk": 15, 
+        "model": "pages.content", 
         "fields": {
-            "body": "<h1><strong>Beta Alpha Psi - A National Honorary Fraternity</strong></h1><h3><strong>What Beta Alpha Psi can do for YOU!</strong></h3><ul><li>Membership in a fraternity&#160;<strong>nationally recognized by the accounting profession</strong></li><li>Opportunity&nbsp;to&nbsp;<strong>NETWORK</strong>&nbsp;with:<ul><li>Big Four Accounting Firms</li><li>Regional Accounting Firms</li><li>Corporate Accountants</li><li>Faculty and Staff</li></ul></li><li>Information on the CPA exam and on CPA review courses</li><li>Meet other fun and friendly BAP members</li></ul><strong><h3>Academic Membership Requirements:</h3></strong><ul><li><strong>H<strong>ave a 3.20 Accounting and Cumulative GPA</strong></strong></li><li><strong>Pursuing a concentration in accounting</strong></strong></li><li><strong><strong><strong><strong>Sophomores and Juniors welcome!</strong></strong></strong></strong></li></ul><h3><strong><span>Interested?</span></strong></h3><h3><span>Attend our INFO NIGHT</span></h3><strong><strong><strong><ul><li>Tuesday, January 21st from 6:30pm to 7:00pm CG1056 (Located in the Kelley Graduate Center)</li><li>If you are interested and cannot attend the callout meeting please contact Shannon Eckerle (<a href=\"mailto: smeckerl@indiana.edu\">smeckerl@indiana.edu</a>) or Jared Wolski (<a href=\"mailto:jmwolski@indiana.edu\">jmwolski@indiana.edu</a>).</li></ul></strong><strong>",
-            "type": "body_content",
-            "page": 5,
-            "language": "en",
+            "body": "<h1><strong>Beta Alpha Psi - A National Honorary Fraternity</strong></h1><h3><strong>What Beta Alpha Psi can do for YOU!</strong></h3><ul><li>Membership in a fraternity&#160;<strong>nationally recognized by the accounting profession</strong></li><li>Opportunity&nbsp;to&nbsp;<strong>NETWORK</strong>&nbsp;with:<ul><li>Big Four Accounting Firms</li><li>Regional Accounting Firms</li><li>Corporate Accountants</li><li>Faculty and Staff</li></ul></li><li>Information on the CPA exam and on CPA review courses</li><li>Meet other fun and friendly BAP members</li></ul><strong><h3>Academic Membership Requirements:</h3></strong><ul><li><strong>H<strong>ave a 3.20 Accounting and Cumulative GPA</strong></strong></li><li><strong>Pursuing a concentration in accounting</strong></strong></li><li><strong><strong><strong><strong>Sophomores and Juniors welcome!</strong></strong></strong></strong></li></ul><h3><strong><span>Interested?</span></strong></h3><h3><span>Attend our INFO NIGHT</span></h3><strong><strong><strong><ul><li>Tuesday, January 21st from 6:30pm to 7:00pm CG1056 (Located in the Kelley Graduate Center)</li><li>If you are interested and cannot attend the callout meeting please contact Shannon Eckerle (<a href=\"mailto: smeckerl@indiana.edu\">smeckerl@indiana.edu</a>) or Jared Wolski (<a href=\"mailto:jmwolski@indiana.edu\">jmwolski@indiana.edu</a>).</li></ul></strong><strong>", 
+            "type": "body_content", 
+            "page": 5, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:52:57"
         }
-    },
+    }, 
     {
-        "pk": 16,
-        "model": "pages.content",
+        "pk": 16, 
+        "model": "pages.content", 
         "fields": {
-            "body": "Media",
-            "type": "title",
-            "page": 6,
-            "language": "en",
+            "body": "Media", 
+            "type": "title", 
+            "page": 6, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:53:17"
         }
-    },
+    }, 
     {
-        "pk": 17,
-        "model": "pages.content",
+        "pk": 17, 
+        "model": "pages.content", 
         "fields": {
-            "body": "media",
-            "type": "slug",
-            "page": 6,
-            "language": "en",
+            "body": "media", 
+            "type": "slug", 
+            "page": 6, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:53:17"
         }
-    },
+    }, 
     {
-        "pk": 18,
-        "model": "pages.content",
+        "pk": 18, 
+        "model": "pages.content", 
         "fields": {
-            "body": "<p>some media</p>",
-            "type": "body_content",
-            "page": 6,
-            "language": "en",
+            "body": "<p>some media</p>", 
+            "type": "body_content", 
+            "page": 6, 
+            "language": "en", 
             "creation_date": "2009-08-20 00:53:18"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "pages.content", 
+        "fields": {
+            "body": "BAP Career Fair 2009", 
+            "type": "title", 
+            "page": 7, 
+            "language": "en", 
+            "creation_date": "2009-08-21 21:59:34"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "pages.content", 
+        "fields": {
+            "body": "bap-career-fair-2009", 
+            "type": "slug", 
+            "page": 7, 
+            "language": "en", 
+            "creation_date": "2009-08-21 21:59:34"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "pages.content", 
+        "fields": {
+            "body": "<h1>Career Fair 2009 - Companies Section</h1> \r\n        <p>Thank you for choosing to pay online (approx. 3% Fee will be charged as Paypal processing fee. It will appear as Handling Cost upon checkout). </p> \r\n        <p>Please follow the step-by-step instructions carefully. </p> \r\n        <ol><li>Please mention number of tables in the \"Quantity\" field on the next page.</li><li>Click \"Update Cart\" button before clicking on \"Secure Checkout\".</li><li>Please click on the \"Add to Cart\" button now to continue. </li></ol> \r\n         \r\n         \r\n         \r\n      <form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\"> \r\n<p><input src=\"https://www.paypal.com/en_US/i/btn/x-click-but22.gif\" name=\"submit\" alt=\"Make payments with PayPal - it's fast, free and secure!\" type=\"image\" /></p><input name=\"add\" value=\"1\" type=\"hidden\" /> \r\n<input name=\"cmd\" value=\"_cart\" type=\"hidden\" /> \r\n<input name=\"business\" value=\"bap@indiana.edu\" type=\"hidden\" /> \r\n<input name=\"item_name\" value=\"BAP Career Fair 2009\" type=\"hidden\" /> \r\n<input name=\"amount\" value=\"300.00\" type=\"hidden\" /> \r\n<input name=\"page_style\" value=\"BAP\" type=\"hidden\" /> \r\n<input name=\"no_shipping\" type=\"hidden\" /> \r\n<input name=\"no_note\" value=\"1\" type=\"hidden\" /> \r\n<input name=\"currency_code\" value=\"USD\" type=\"hidden\" /> \r\n<input name=\"lc\" value=\"US\" type=\"hidden\" /> \r\n<input name=\"bn\" value=\"PP-ShopCartBF\" type=\"hidden\" /> \r\n</form> ", 
+            "type": "body_content", 
+            "page": 7, 
+            "language": "en", 
+            "creation_date": "2009-08-21 21:59:34"
         }
     }
 ]
