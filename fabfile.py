@@ -21,6 +21,10 @@ def deploy():
 def build_docs():
     with cd('/var/www/bap/docs'):
         sudo('source /home/wes/.virtualenvs/bap/bin/activate && make html')
+        sudo('source /home/wes/.virtualenvs/bap/bin/activate && make latex')
+        with cd('_build/latex'):
+            sudo('source /home/wes/.virtualenvs/bap/bin/activate && make')
+            sudo('mv IUBAPWebsite.pdf ../html/')
         sudo('chown www-data:bap -R _build')
         sudo('chmod u+rw,g+rw -R _build')
 

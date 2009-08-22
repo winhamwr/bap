@@ -8,6 +8,8 @@
 User documentation for the IU BAP Website
 =========================================
 
+A PDF version of this documentation can be found at http://bap.weswinham.com/docs/IUBAPWebsite.pdf
+
 .. note:: 
 
     For technical documentation, see the :ref:`dev-docs-home` 
