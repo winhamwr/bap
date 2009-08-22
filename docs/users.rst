@@ -14,6 +14,23 @@ The IU BAP website integrates user account authorization with IU's `CAS <http://
 User Permissions (via ``groups``)
 =================================
 
+User permissions are controlled primarily by adding them to a group. This is more manageable than adding individual permissions to specific users and less prone to error. It also allows us to easily classify and sort users according to group.
+
+Groups
+------
+
+``BAP Member``
+	BAP members are IU users that are actually members of the organization. Adding users to this group ensures that they appear on the :ref:`members-list` and that they're allowed to perform :ref:`event-sign-up`.  
+
+``BAP Faculty``
+	As the name emplies, associated faculty should be members of this group. They'll then appear in the :ref:`faculty-list`.
+
+``BAP Content Editor``
+	Users that should be able to add, edit and delete site pages should be members of this group. In order to actually perform changes, they must also have the ``staff`` box checked.
+
+``BAP User Administrator``
+	Members of this group have permission to modify other users' accounts. It's important that only trusted and trained users have this ability. In order to actually make modification, the user must also have the ``staff`` box checked.
+
 User Passwords
 ==============
 
