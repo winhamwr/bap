@@ -38,7 +38,7 @@ Setting a page as a ``subpage`` of the ``home`` page automatically adds it to th
     Information about joining BAP.
 
 - ``media``
-    Selected videos and pictures for the organization pulled from BAP's `Flickr <http://flickr.com>`_ and `YouTube <http://youtube.com`_ accounts. For pointers on handling media, see :ref:`media-management`
+    Selected videos and pictures for the organization pulled from BAP's `Flickr <http://flickr.com>`_ and `YouTube <http://youtube.com>`_ accounts. For pointers on handling media, see :ref:`media-management`
 
 Modifying Pages
 ---------------
@@ -56,9 +56,9 @@ Page Editing
 
 ``status``
 	The ``Status`` controls whether or not the page appears to normal users.
-- Hidden pages don't appear in navigation menus, but are viewable if you go directly to their url
-- Draft pages are completely invisible to normal users. Use this status if you're not quite finished with a page and want to do some more work on it before people see it.
-- Published pages show up in menus and are viewable by everyone.
+	- Hidden pages don't appear in navigation menus, but are viewable if you go directly to their url
+	- Draft pages are completely invisible to normal users. Use this status if you're not quite finished with a page and want to do some more work on it before people see it.
+	- Published pages show up in menus and are viewable by everyone.
 
 ``template``
 	TODO
