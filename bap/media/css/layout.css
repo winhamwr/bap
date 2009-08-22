@@ -29,3 +29,12 @@
     margin-right: auto;
     text-align: center;
 }
+
+.content_footer {
+    margin-top: 3em;
+    margin-bottom: 0;
+}
+
+.content_footer > p {
+    margin-bottom: 0;
+}
