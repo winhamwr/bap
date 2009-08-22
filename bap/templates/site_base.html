@@ -45,6 +45,13 @@ lorem ipsum
         - <a href="{% show_absolute_url 'about' %}">{% show_content 'about' 'title' %}</a>
         - <a href="{% show_absolute_url 'privacy' %}">{% show_content 'privacy' 'title' %}</a>
         - <a href="{% show_absolute_url 'contact' %}">{% show_content 'contact' 'title' %}</a>
+        - <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<p><input src="http://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="Donate via PayPal" type="image" /></p>
+<input name="cmd" value="_donations" type="hidden" />
+<input name="business" value="bap@indiana.edu" type="hidden" />
+<input name="item_name" value="BAP Donation" type="hidden" />
+<input name="currency_code" value="USD" type="hidden" />
+</form>
     </div>
 </div>
 {% endblock %}
