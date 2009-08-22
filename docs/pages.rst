@@ -1,19 +1,20 @@
 .. _pages:
 
+************************
 Controlling Site Content
-========================
+************************
 
 The BAP Website uses a `Content Management System (CMS) <http://en.wikipedia.org/wiki/Content_management_system>`_ to allow users to edit content on specific pages with their browser. It's also possible to lay out pages in a hierarchy and to make links between pages in order to build whatever layout best meets the need.
 
-.. _site_structure:
+.. _site-structure:
 
 Site Structure
---------------
+==============
 
 .. _required-pages:
 
 Required Pages
-##############
+--------------
 
 Despite the flexibility in the CMS, some pages must always exist for the site to function properly. A site without a homepage isn't very useful, for example. The following cms pages are required for the website to fully function. Deleting any of these pages, could have unintended consequences. Pages with the following ``slug`` must exist:
 
@@ -32,7 +33,7 @@ Despite the flexibility in the CMS, some pages must always exist for the site to
 .. _main-nav-pages:
 
 Main Nav Pages
-##############
+--------------
 
 Setting a page as a ``subpage`` of the ``home`` page automatically adds it to the main nav menu (the red bar in the upper right). By default the following pages exists as main navigation pages:
 
@@ -45,7 +46,7 @@ Setting a page as a ``subpage`` of the ``home`` page automatically adds it to th
 .. _modifying-pages:
 
 Modifying Pages
----------------
+===============
 
 The quickest way to edit a page is by logging in and using the ``Edit this page`` link found in the footer of all editable pages. You're then taken to a form allowing the modification of the page content, title and url. It's also possible to edit pages via :menuselection: `Admin --> Pages`
 
@@ -54,7 +55,7 @@ For a tutorial on basic page management and editing, see :ref:`pages-tutorial`
 .. _page-editing:
 
 Page Editing
-############
+------------
 
 ``Title``
 	The ``Title`` field is the name that shows up in automatically generated menus/links and in your browser's title bar when you visit that page. 
@@ -84,7 +85,7 @@ If you'd like to practice making, moving and deleting pages, you can use the `Sa
 .. _arranging-pages:
 
 Arranging Pages
-###############
+---------------
 
 To aid organization, pages are arranged in a tree structure. You can view the structure via :menuselection: `Admin --> Pages`. By clicking the ``move`` button next to a page, you're able to select one of ``move down``, ``move up``, ``move in`` and ``move out``. This allows you to change the page order on the same level and also change the nesting of pages. The navigation menu in the upper right automatically displays links to all child pages (pages that are nested inside another page), so by nesting pages, you're able to build navigation menus that logically link sections of the site together.
 

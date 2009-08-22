@@ -1,5 +1,6 @@
+************
 Installation
-============
+************
 
 On a fresh ubuntu 9.04 box, install the following
 
@@ -23,7 +24,7 @@ On a fresh ubuntu 9.04 box, install the following
 
     $ pip install -E ~/.virtualenvs/bap -r /var/www/bap/requirements.txt
 
-7. Create the database using `Django <http://djangoproject.com>`'s ``syncdb`` command.
+7. Create the database using `Django <http://djangoproject.com>`_'s ``syncdb`` command.
 
 .. code-block:: bash
 

@@ -5,10 +5,11 @@
 
 .. _user-docs-home:
 
+#########################################
 User documentation for the IU BAP Website
-=========================================
+#########################################
 
-A PDF version of this documentation can be found at http://bap.weswinham.com/docs/IUBAPWebsite.pdf
+A PDF version of this documentation can be found: `Here <IUBAPWebsite.pdf>`_
 
 .. note:: 
 
@@ -19,6 +20,7 @@ A PDF version of this documentation can be found at http://bap.weswinham.com/doc
     
     users
     pages
+    announcements
     pages_tutorial
     media_management
 
