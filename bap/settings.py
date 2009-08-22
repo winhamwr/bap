@@ -142,6 +142,7 @@ INSTALLED_APPS = (
 
     # BAP additions
     'cas_consumer',
+    'django_extensions',
 
     # For cms functionality
     'mptt',
