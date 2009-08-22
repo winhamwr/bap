@@ -24,8 +24,16 @@ def build_docs():
         sudo('chown www-data:bap -R _build')
         sudo('chmod u+rw,g+rw -R _build')
 
+@roles('webservers')
+def reset_db():
+    with cd('/var/www/bap/bap'):
+        sudo('source /home/wes/.virtualenvs/bap/bin/activate && ./manage.py reset_db --noinput')
+        sudo('source /home/wes/.virtualenvs/bap/bin/activate && ./manage.py syncdb --noinput')
+        sudo('source /home/wes/.virtualenvs/bap/bin/activate && ./manage.py loaddata fixtures/default_users.json fixtures/required_pages.json')
+        sudo('chown www-data:bap dev.db')
+        sudo('chmod u+rw,g+rw dev.db')
 
 @roles('webservers')
 def install_dev_reqs():
     with cd('/var/www/bap'):
-        run('source /home/wes/.virtualenvs/bap/bin/activate && pip install -r dev_requirements.txt', pty=True)
+        run('source /home/wes/.virtualenvs/bap/bin/activate && pip install -r dev_requirements.txt')

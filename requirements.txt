@@ -30,3 +30,6 @@ django-mptt==0.3_pre
 django-tagging==0.3_pre
 html5lib>=0.10
 django-page-cms==1.0.6
+
+
+django-extensions==0.4.1
