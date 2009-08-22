@@ -19,6 +19,8 @@ A PDF version of this documentation can be found at http://bap.weswinham.com/doc
     
     users
     pages
+    pages_tutorial
+    media_management
 
 * :ref:`genindex`
 * :ref:`search`
