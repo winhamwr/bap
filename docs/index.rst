@@ -15,8 +15,8 @@ User documentation for the IU BAP Website
 .. toctree::
     :maxdepth: 2
     
-    User Accounts <users>
-    Site Content <pages>
+    users
+    pages
 
 * :ref:`genindex`
 * :ref:`search`
