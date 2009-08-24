@@ -34,6 +34,10 @@ Groups
 User Passwords
 ==============
 
+Because user authentication is handled through the CAS system, the password settings via the user management pages don't actually do anything. The only way to change a password is for the user to handle the change via the IU user account system. 
+
 Access for People Without IU User Accounts
 ==========================================
+
+It's not currently well-supported, but it's possible for users without an IU account to gain access to the members section. To do this, create an account for the person and then set a password for them through the password change form. They'll then be able to login via the `Admin Login <http://iubap.org/admin>`_, after which, they'll be able to visit the home page and access members-only functionality. 
 
