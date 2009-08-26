@@ -7,6 +7,13 @@
     right: 280px;
     top: 6px;
 }
+#tabhead .logo {
+    height: 90px;
+}
+#tabhead .logo img {
+    height: 125px;
+    weight: 125px;
+}
 
 #subnav {
     margin: 9px 0 0 0;
