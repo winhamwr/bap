@@ -4,6 +4,7 @@
 {% load openid_tags %}
 {% load ifsetting_tag %}
 {% load cache pages_tags %}
+{% load generic_flatblocks %}
 
 {% block extra_head_base %}
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/site_tabs.css" />
@@ -36,6 +37,17 @@
 {% block substripe %}<div>Beta Alpha Psi</div>{% endblock %}
 {% block subnav %}
 lorem ipsum
+{% endblock %}
+
+{% block sidebar %}
+<div class="sidebar">
+<div class="advert">
+{% gblock 2 for "gblocks.TitleTextAndImage" into "advert" %}
+<h3>{{ advert.title }}</h3>
+<p>{{ advert.text }}</p>
+<p><img height="64" width="200" src="{{ MEDIA_URL }}{{ advert.image }}" /></p>
+</div>
+</div>
 {% endblock %}
 
 {% block footer %}

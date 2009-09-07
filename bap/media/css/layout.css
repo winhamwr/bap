@@ -27,6 +27,10 @@
     width: 760px;
 }
 
+.sidebar {
+    float: right;
+}
+
 #footer {
     width: 760px;
 }

@@ -148,6 +148,10 @@ INSTALLED_APPS = (
     'mptt',
     'tagging',
     'pages',
+
+    # For ads
+    'django_generic_flatblocks',
+    'django_generic_flatblocks.contrib.gblocks',
 )
 
 ABSOLUTE_URL_OVERRIDES = {
