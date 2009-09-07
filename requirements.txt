@@ -32,6 +32,9 @@ html5lib>=0.10
 django-page-cms==1.0.6
 
 # For adds
--e git+git://github.com/bartTC/django-generic-flatblocks.git@v0.3#egg=django_generic_flatblocks
+-e git+git://github.com/winhamwr/django-generic-flatblocks.git#egg=django_generic_flatblocks
+
+# Calendering
+-e git+git://github.com/winhamwr/django-schedule.git#egg=schedule
 
 django-extensions==0.4.1
