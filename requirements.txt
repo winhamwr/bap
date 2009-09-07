@@ -31,7 +31,7 @@ django-tagging==0.3_pre
 html5lib>=0.10
 django-page-cms==1.0.6
 
-# For adds
+# For ads
 -e git+git://github.com/winhamwr/django-generic-flatblocks.git#egg=django_generic_flatblocks
 
 # Calendering

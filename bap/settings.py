@@ -152,6 +152,9 @@ INSTALLED_APPS = (
     # For ads
     'django_generic_flatblocks',
     'django_generic_flatblocks.contrib.gblocks',
+
+    # For calendering
+    'schedule',
 )
 
 ABSOLUTE_URL_OVERRIDES = {

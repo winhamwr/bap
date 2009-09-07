@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1, 
+        "model": "schedule.calendar", 
+        "fields": {
+            "name": "Professional Events", 
+            "slug": "professional-events"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "schedule.calendar", 
+        "fields": {
+            "name": "Social Events", 
+            "slug": "social-events"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "schedule.calendar", 
+        "fields": {
+            "name": "Community Events", 
+            "slug": "community-events"
+        }
+    }
+]

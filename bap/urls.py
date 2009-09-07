@@ -15,13 +15,17 @@ if settings.ACCOUNT_OPEN_SIGNUP:
 else:
     signup_view = "signup_codes.views.signup"
 
+try:
+    root_page = Page.objects.root()[0]
+except IndexError:
+    root_page = None
 
 urlpatterns = patterns('',
     # Using context requirements from pages.views.details so that we can use the pages templatetags
     url(r'^$', direct_to_template, {
         "template": "homepage.html",
         'extra_context': {
-            'current_page': Page.objects.root()[0],
+            'current_page': root_page,
             'lang': 'en',
             'path': None,
             'pages': Page.objects.navigation().order_by("tree_id"),
@@ -45,6 +49,8 @@ urlpatterns = patterns('',
 
     # For django-page-cms
     (r'^p/', include('pages.urls')),
+
+    (r'^schedule/', include('schedule.urls')),
 )
 
 if settings.SERVE_MEDIA:

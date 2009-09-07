@@ -2,6 +2,7 @@
 
 #home_tab .tab_home,
 #profile_tab .rtab_profile,
+#schedule_tab .rtab_schedule,
 #notices_tab .rtab_notices
 {
     bottom: -1px !important;
@@ -9,12 +10,14 @@
 }
 #home_tab .tab_home a,
 #profile_tab .rtab_profile a,
+#schedule_tab .rtab_schedule a,
 #notices_tab .rtab_notices a
 {
     color: #000 !important; /* selected tab text colour */
 }
 #home_tab .tab_home div,
 #profile_tab .rtab_profile div,
+#schedule_tab .rtab_schedule div,
 #notices_tab .rtab_notices div
 {
     margin: 0;
