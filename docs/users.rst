@@ -16,6 +16,8 @@ User Permissions (via ``groups``)
 
 User permissions are controlled primarily by adding them to a group. This is more manageable than adding individual permissions to specific users and less prone to error. It also allows us to easily classify and sort users according to group.
 
+.. _user-permissions-groups:
+
 Groups
 ------
 

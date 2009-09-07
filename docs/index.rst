@@ -20,6 +20,7 @@ A PDF version of this documentation can be found: `Here <IUBAPWebsite.pdf>`_
     
     users
     pages
+    advertisement
     announcements
     pages_tutorial
     media_management
