@@ -1,21 +1,36 @@
+import os
+
 from fabric.contrib.project import rsync_project
-from fabric.api import roles, env, sudo, run, cd
+from fabric.api import roles, env, sudo, run, cd, put
 
 env.roledefs['webservers'] = ['weswinham.com']
 
 @roles('webservers')
 def deploy():
-    # sudo('ln -s /home/wes/.virtualenvs/bap/lib/python2.6/site-packages/django/contrib/admin/media /var/www/bap/bap/media/admin')
-    sudo('mkdir -p /var/www/bap')
-    sudo('chown wes:bap -R /var/www/bap')
-    rsync_project(remote_dir='/var/www', exclude=['*.pyc', '.git', 'dev.db'])
-    run("cd /home/wes/.virtualenvs/bap/src/cas-consumer && git pull")
-    run("touch /var/www/bap/bap/deploy/pinax.wsgi")
+    env.project_root = '/var/www/bap'
+    env.pinax_root = os.path.join(env.project_root, 'bap')
+    env.virtualenv = '/home/wes/.virtualenvs/bap'
 
-    sudo('chown www-data:bap -R /var/www/bap')
-    sudo('chmod u+rw,g+rw -R /var/www/bap')
+    # sudo('ln -s /home/wes/.virtualenvs/bap/lib/python2.6/site-packages/django/contrib/admin/media /var/www/bap/bap/media/admin')
+    sudo('mkdir -p %(project_root)s' % env)
+    sudo('chown wes:bap -R %(project_root)s' % env)
+    rsync_project(remote_dir='/var/www', exclude=['*.pyc', '.git', 'dev.db'])
+    run("cd %(virtualenv)s/src/cas-consumer && git pull" % env)
+    run("touch %(pinax_root)s/deploy/pinax.wsgi" % env)
+
+    _push_files()
+
+    sudo('chown www-data:bap -R %(project_root)s' % env)
+    sudo('chmod u+rw,g+rw -R %(project_root)s' % env)
 
     build_docs()
+
+def _push_files():
+    """
+    Push files that aren't source, but need to be there anyway (the default advertisement).
+    """
+    put('site_media/gblocks/beckerlogo.gif',
+        '%(project_root)s/site_media/gblocks/beckerlogo.gif' % env)
 
 @roles('webservers')
 def build_docs():
