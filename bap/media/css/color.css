@@ -56,6 +56,10 @@ body {
     border-bottom: 1px solid #04460C;
 }
 
+#subnav ul a:link, #subnav ul a:visited {
+    color: #FFFFFF;
+}
+
 #body {
     background: #FFFFFF;
 }
