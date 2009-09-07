@@ -42,7 +42,7 @@ lorem ipsum
 {% block sidebar %}
 <div class="sidebar">
 <div class="advert">
-{% gblock 2 for "gblocks.TitleTextAndImage" into "advert" %}
+{% gblock 1 for "gblocks.TitleTextAndImage" into "advert" %}
 <h3>{{ advert.title }}</h3>
 <p>{{ advert.text }}</p>
 <p><img height="64" width="200" src="{{ MEDIA_URL }}{{ advert.image }}" /></p>
