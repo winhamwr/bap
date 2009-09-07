@@ -231,6 +231,10 @@ PAGE_TEMPLATES = (
     ('pages/base.html', 'Standard Info Page'),
 )
 
+# Settings for the About members list
+BAP_MEMBERS_GROUP_NAME = 'BAP Member'
+BAP_FACULTY_GROUP_NAME = 'BAP Faculty'
+
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.
 try:

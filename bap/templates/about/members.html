@@ -1,0 +1,39 @@
+{% extends "site_base.html" %}
+{% block head_title %}
+Member List
+{% endblock %}
+
+{% block body %}
+<h2>BAP Members</h2>
+<ul>
+{% for member in member_list %}
+    <li>
+        {{ member.first_name }} {{ member.last_name }}
+    {% if user.is_authenticated and user.is_staff %}
+        <ul>
+        {% for group in member.groups.all %}
+            <li>{{ group }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    </li>
+{% endfor %}
+</ul>
+
+<h2>BAP Faculty</h2>
+<ul>
+{% for member in faculty_list %}
+    <li>
+        {{ member.first_name }} {{ member.last_name }}
+    {% if user.is_authenticated and user.is_staff %}
+        <ul>
+        {% for group in member.groups.all %}
+            <li>{{ group }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

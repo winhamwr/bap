@@ -4,6 +4,7 @@
     {% for child in children %}
         <li><a href="{% show_absolute_url child %} ">{% show_content child "title" %}</a></li>
     {% endfor %}
+    <li><a href="{% url members %}">Member List</a></li>
 </ul>
 {% else %}
 &nbsp;
