@@ -32,11 +32,3 @@
     {% endif %}
 {% endif %}
 {% endblock %}
-
-{% block extra_content %}
-{% if user.is_authenticated and user.is_staff %}
-<div class="content_footer cms_edit centered">
-    <p><a href="{% url admin:pages_page_change current_page.pk %}">Edit</a> this page (Last edit: {{ current_page.last_modification_date }})</p>
-</div>
-{% endif %}
-{% endblock %}
