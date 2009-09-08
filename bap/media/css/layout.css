@@ -11,8 +11,8 @@
     height: 90px;
 }
 #tabhead .logo img {
-    height: 125px;
-    weight: 125px;
+    height: 135px !important;
+    width: 135px !important;
 }
 
 #subnav {
