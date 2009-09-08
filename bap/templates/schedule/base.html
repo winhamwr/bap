@@ -1,11 +1,10 @@
 {% extends "site_base.html" %}
 {% block extra_head %}
-{{ block.super }}
 <link rel="stylesheet" href="{{ MEDIA_URL }}schedule/css/schedule.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="{{ MEDIA_URL }}css/jquery-ui.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="{{ MEDIA_URL }}css/jquery.tooltip.css" />
-<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui.js"></script>
-<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.tooltip.js"></script>
+<link rel="stylesheet" href="{{ MEDIA_URL }}schedule/css/fullcalendar.css" type="text/css" media="screen" />
+<script type="text/javascript" src="{{ MEDIA_URL }}schedule/js/ui.core.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}schedule/js/ui.draggable.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}schedule/js/fullcalendar.js"></script>
 {% endblock %}
 
 {% block rtab_id %}id="schedule_tab"{% endblock %}

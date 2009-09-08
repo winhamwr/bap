@@ -27,8 +27,24 @@
     width: 760px;
 }
 
-.sidebar {
+.widebody {
+    width: 100%;
+}
+
+.sidebar_right {
     float: right;
+}
+.sidebar_left {
+    float: left;
+}
+
+div.calendar {
+    margin-left:20px;
+    margin-right:20px;
+}
+
+div.small_cal {
+    width: 250px;
 }
 
 #footer {
