@@ -24,18 +24,36 @@
 }
 
 #body {
-    width: 760px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0;
+}
+#content {
+    width: 768px;
+    padding: 0;
+    float: left;
+    clear: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: -10px;
+    margin-right: 1%;
+    display: inline;
 }
 
 .widebody {
     width: 100%;
 }
 
-.sidebar_right {
+#sidebar{
+    width: 300px;
     float: right;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.sidebar_left {
-    float: left;
+
+#sidebar .advert img{
+    margin: 0 auto;
 }
 
 div.calendar {
@@ -44,11 +62,11 @@ div.calendar {
 }
 
 div.small_cal {
-    width: 250px;
+    width: 280px;
 }
 
 #footer {
-    width: 760px;
+    width: 70%;
 }
 
 .centered {

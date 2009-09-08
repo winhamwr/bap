@@ -62,7 +62,7 @@
         <div id="substripe">{% block substripe %}lorem ipsum{% endblock %}</div>
         <!-- end custom -->
         {% block body_outer %}
-        <div id="body" class="rounded">
+        <div id="body">
             {% if messages %}
                 <ul id="messages">
                     {% for message in messages %}
@@ -71,16 +71,19 @@
                 </ul>
             {% endif %}
 
-            <div id="content">
+            <div id="content" class="rounded">
             {% block body %}
             {% endblock %}
-            </div>
             {% block extra_content %}
             {% endblock %}
+            </div>
+            <div id="sidebar">
+            {% block sidebar %}
+            {% endblock %}
+            </div>
+
 
         </div>
-        {% endblock %}
-        {% block sidebar %}
         {% endblock %}
 
         <div id="footer" class="rounded">{% block footer %}{% endblock %}</div>

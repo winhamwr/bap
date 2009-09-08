@@ -59,18 +59,14 @@
 {% block substripe %}<div>Beta Alpha Psi</div>{% endblock %}
 
 {% block sidebar %}
-<div class="sidebar_right">
-    <div class="advert">
+<div class="advert">
     {% gblock 1 for "gblocks.TitleTextAndImage" into "advert" %}
     <h3>{{ advert.title }}</h3>
     <p>{{ advert.text }}</p>
-    <p><a href="http://www.beckercpa.com/"><img height="64" width="200" src="{{ MEDIA_URL }}{{ advert.image }}" /></a></p>
-    </div>
+    <div><a href="http://www.beckercpa.com/"><img height="64" width="200" src="{{ MEDIA_URL }}{{ advert.image }}" /></a></div>
 </div>
 {% block small_call %}
-<div class="sidebar_left">
-    <div class="small_cal">
-    </div>
+<div class="small_cal">
 </div>
 {% endblock %}
 {% endblock %}
