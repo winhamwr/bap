@@ -61,9 +61,7 @@
 {% block sidebar %}
 <div class="advert">
     {% gblock 1 for "gblocks.TitleTextAndImage" into "advert" %}
-    <h3>{{ advert.title }}</h3>
-    <p>{{ advert.text }}</p>
-    <div><a href="http://www.beckercpa.com/"><img height="64" width="200" src="{{ MEDIA_URL }}{{ advert.image }}" /></a></div>
+    <div><a href="{{ advert.title }}"><img src="{{ MEDIA_URL }}{{ advert.image }}" /></a></div>
 </div>
 {% block small_call %}
 <div class="small_cal">

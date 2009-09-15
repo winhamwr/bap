@@ -4,8 +4,9 @@
 }
 #tabhead .middle_logo {
     position: absolute;
-    right: 280px;
-    top: 6px;
+    right: 5px;
+    top: 22px;
+    z-index: 0;
 }
 #tabhead .logo {
     height: 90px;
@@ -30,7 +31,7 @@
 }
 #content {
     width: 768px;
-    padding: 0;
+    padding: .5em .5em .5em .5em;
     float: left;
     clear: left;
     margin-bottom: 20px;
@@ -40,20 +41,26 @@
     display: inline;
 }
 
+#content h1, #content h2 {
+    text-align: center;
+}
+
 .widebody {
     width: 100%;
 }
 
 #sidebar{
-    width: 300px;
+    min-width: 350px;
     float: right;
+    margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 #sidebar .advert img{
-    margin: 0 auto;
+    display: block;
+    margin: 0 auto 0 auto;
 }
 
 div.calendar {
@@ -62,7 +69,11 @@ div.calendar {
 }
 
 div.small_cal {
-    width: 280px;
+    min-width: 280px;
+}
+
+h2.full-calendar-title {
+    text-align: center;
 }
 
 #footer {

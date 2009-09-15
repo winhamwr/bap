@@ -29,8 +29,8 @@ def _push_files():
     """
     Push files that aren't source, but need to be there anyway (the default advertisement).
     """
-    put('site_media/gblocks/beckerlogo.gif',
-        '%(project_root)s/site_media/gblocks/beckerlogo.gif' % env)
+    put('bap/site_media/gblocks/beckerlogo.gif',
+        '%(pinax_root)s/site_media/gblocks/beckerlogo.gif' % env)
 
 @roles('webservers')
 def build_docs():
@@ -48,7 +48,7 @@ def reset_db():
     with cd('/var/www/bap/bap'):
         sudo('source /home/wes/.virtualenvs/bap/bin/activate && ./manage.py reset_db --noinput')
         sudo('source /home/wes/.virtualenvs/bap/bin/activate && ./manage.py syncdb --noinput')
-        sudo('source /home/wes/.virtualenvs/bap/bin/activate && ./manage.py loaddata fixtures/default_users.json fixtures/required_pages.json')
+        sudo('source /home/wes/.virtualenvs/bap/bin/activate && ./manage.py loaddata fixtures/default_users.json fixtures/required_pages.json fixtures/advertisement.json fixtures/calendars.json')
         sudo('chown www-data:bap dev.db')
         sudo('chmod u+rw,g+rw dev.db')
 

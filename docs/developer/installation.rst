@@ -24,6 +24,12 @@ On a fresh ubuntu 9.04 box, install the following
 
     $ pip install -E ~/.virtualenvs/bap -r /var/www/bap/requirements.txt
 
+6. Install PIL
+
+.. code-block:: bash
+
+    $ sudo apt-get install python-imaging
+
 7. Create the database using `Django <http://djangoproject.com>`_'s ``syncdb`` command.
 
 .. code-block:: bash
@@ -31,3 +37,5 @@ On a fresh ubuntu 9.04 box, install the following
     $ /var/www/bap/bap/manage.py syncdb
 
 8. Setup apache
+
+http://gist.github.com/106077
