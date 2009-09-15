@@ -60,8 +60,8 @@
 
 {% block sidebar %}
 <div class="advert">
-    {% gblock 1 for "gblocks.TitleTextAndImage" into "advert" %}
-    <div><a href="{{ advert.title }}"><img src="{{ MEDIA_URL }}{{ advert.image }}" /></a></div>
+    {% gblock 1 for "generic_ads.LinkedImage" into "advert" %}
+    <div><a href="{{ advert.url }}"><img src="{{ MEDIA_URL }}{{ advert.image }}" /></a></div>
 </div>
 {% block small_call %}
 <div class="small_cal">

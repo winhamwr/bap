@@ -151,7 +151,7 @@ INSTALLED_APPS = (
 
     # For ads
     'django_generic_flatblocks',
-    'django_generic_flatblocks.contrib.gblocks',
+    'generic_ads',
 
     # For calendering
     'schedule',
