@@ -4,6 +4,9 @@ from fabric.contrib.project import rsync_project
 from fabric.api import roles, env, sudo, run, cd, put
 
 env.roledefs['webservers'] = ['weswinham.com']
+env.roledefs['dbserver'] = ['weswinham.com']
+
+env.warn_only = True
 
 @roles('webservers')
 def deploy():
@@ -56,3 +59,15 @@ def reset_db():
 def install_dev_reqs():
     with cd('/var/www/bap'):
         run('source /home/wes/.virtualenvs/bap/bin/activate && pip install -r dev_requirements.txt')
+
+@roles('dbserver')
+def create_db():
+    mysql_cmds = [
+        "CREATE USER 'bap'@'localhost' IDENTIFIED BY 'Pass The CPA exam';",
+        "CREATE DATABASE bap;",
+        "GRANT ALL on bap.* TO 'bap'@'localhost';"
+    ]
+    run_mysql = 'mysql -u root -e "%s"'
+
+    for cmd in mysql_cmds:
+        result = sudo(run_mysql % cmd)
