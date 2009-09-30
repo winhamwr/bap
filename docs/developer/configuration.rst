@@ -27,6 +27,6 @@ Groups
 	* Schedule: all but Calendar add/delete
 
 ``BAP User Administrator``
-	* auth: group all, user add/change, permission all
+	* auth: group all, user add/change
 
 

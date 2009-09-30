@@ -30,12 +30,18 @@ On a fresh ubuntu 9.04 box, install the following
 
     $ sudo apt-get install python-imaging
 
-7. Create the database using `Django <http://djangoproject.com>`_'s ``syncdb`` command.
+7. Setup apache
+
+http://gist.github.com/106077
+
+8. Install mysql
+
+.. code-block:: bash
+
+    $ apt-get install mysql-server python-mysqldb
+
+9. Create the database using `Django <http://djangoproject.com>`_'s ``syncdb`` command.
 
 .. code-block:: bash
 
     $ /var/www/bap/bap/manage.py syncdb
-
-8. Setup apache
-
-http://gist.github.com/106077

@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="{{ MEDIA_URL }}schedule/css/schedule.css" type="text/css" media="screen" />
     <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui.js"></script>
     <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.timePicker.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.form.js"></script>
     <script type="text/javascript">
-    $(function() {
+    $(document).ready(function() {
         $("#id_start_0").datepicker({dateFormat: $.datepicker.ATOM});
         $("#id_end_0").datepicker({dateFormat: $.datepicker.ATOM});
         $("#id_start_1").timePicker();
@@ -34,6 +35,14 @@
           $(this).removeClass("error");
           }
         });
+
+         $('#edit_event').ajaxForm({
+            target: '.event_dialog',
+            success: function() {
+                $('.event_dialog').dialog('option', 'title', 'Event')
+				$('.event_dialog').dialog("open");
+            }
+        });
     });
     </script>
 {% endblock %}
@@ -41,7 +50,7 @@
 {% block body %}
 <b>{% trans "Edit this event. All fields are required." %}</b>
 <br/><br/>
-<form action="{% url edit_occurrence event_id=occurrence.event.pk,occurrence_id=occurrence.pk %}" method="post">
+<form id="edit_event" action="{% url edit_occurrence event_id=occurrence.event.pk,occurrence_id=occurrence.pk %}" method="post">
 <table>
 {{ form.as_table }}
 </table>

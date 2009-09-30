@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="{{ MEDIA_URL }}schedule/css/schedule.css" type="text/css" media="screen" />
     <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui.js"></script>
     <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.timePicker.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.form.js"></script>
     <script type="text/javascript">
-    $(function() {
+    $(document).ready(function() {
         $("#id_start_0").datepicker({dateFormat: $.datepicker.ATOM});
         $("#id_end_0").datepicker({dateFormat: $.datepicker.ATOM});
         $("#id_start_1").timePicker();
@@ -34,6 +35,14 @@
           $(this).removeClass("error");
           }
         });
+
+        $('#create_event').ajaxForm({
+            target: '.event_dialog',
+            success: function() {
+                $('.event_dialog').dialog('option', 'title', 'Event')
+				$('.event_dialog').dialog("open");
+            }
+        });
     });
     </script>
 {% endblock %}
@@ -41,7 +50,7 @@
 {% block body %}
 <b>{% trans "Create a new event. All fields are required." %}</b>
 <br/><br/>
-<form action="{% url calendar_create_event calendar_slug=calendar.slug %}" method="post">
+<form id="create_event" action="{% url calendar_create_event calendar_slug=calendar.slug %}" method="post">
 <table>
 {{ form.as_table }}
 </table>

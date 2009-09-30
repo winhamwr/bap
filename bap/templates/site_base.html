@@ -15,14 +15,24 @@
     {% block extra_head %}
     <link rel="stylesheet" href="{{ MEDIA_URL }}schedule/css/schedule.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="{{ MEDIA_URL }}schedule/css/fullcalendar.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{{ MEDIA_URL }}schedule/css/blitzer/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" />
     <script type="text/javascript" src="{{ MEDIA_URL }}schedule/js/ui.core.js"></script>
     <script type="text/javascript" src="{{ MEDIA_URL }}schedule/js/ui.draggable.js"></script>
+	<script type="text/javascript" src="{{ MEDIA_URL }}schedule/js/ui.dialog.js"></script>
     <script type="text/javascript" src="{{ MEDIA_URL }}schedule/js/fullcalendar.js"></script>
     <script type='text/javascript'>
+
 	$(document).ready(function() {
+		$('.event_dialog').dialog({autoOpen: false, width: '380px'});
+
 		$('.small_cal').fullCalendar({
 			buttons: false,
 			events: '{% url calendar_events calendar_slug="professional-events" %}',
+			eventClick: function(calEvent, jsEvent) {
+				$('.event_dialog').dialog('option', 'title', 'Event')
+				$('.event_dialog').dialog("open");
+				$('.event_dialog').load("/schedule/event/"+calEvent.id+"/");
+			}
 		});
 		$('.small_cal').fullCalendar('addEventSource', '{% url calendar_events calendar_slug="social-events" %}');
 		$('.small_cal').fullCalendar('addEventSource', '{% url calendar_events calendar_slug="community-events" %}');
@@ -64,6 +74,7 @@
     <div><a href="{{ advert.url }}"><img src="{{ MEDIA_URL }}{{ advert.image }}" /></a></div>
 </div>
 {% block small_call %}
+<div class="event_dialog"></div>
 <div class="small_cal">
 </div>
 {% endblock %}

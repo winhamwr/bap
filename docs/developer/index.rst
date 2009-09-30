@@ -8,8 +8,9 @@ This documentation is intended for developers that are extending the project and
 
 .. toctree::
     :maxdepth: 2
-    
+
     installation
+    configuration
 
 * :ref:`genindex`
 * :ref:`modindex`

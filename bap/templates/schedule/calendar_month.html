@@ -29,8 +29,7 @@
 	}
 	$(document).ready(function() {
 
-		$('.new_event_dialog').dialog({autoOpen: false, width: '580px'});
-		$('.edit_event_dialog').dialog({autoOpen: false, width: '580px'});
+		$('.event_dialog').dialog({autoOpen: false, width: '580px'});
 
 		$('.calendar').fullCalendar({
 			draggable: true,
@@ -44,26 +43,25 @@
 				else $('#loading').hide();
 			},
 			dayClick: function(dayDate) {
-				$('.new_event_dialog').dialog('option', 'title', 'Add Event')
-				$('.new_event_dialog').dialog("open");
+				$('.event_dialog').dialog('option', 'title', 'Add Event')
+				$('.event_dialog').dialog("open");
 				var iso_date = convert_iso(dayDate);
 				var iso_date_uri = escape(iso_date);
-				$('.new_event_dialog').load("{% url calendar_create_event calendar_slug=calendar.slug %}?start="+iso_date_uri);
+				$('.event_dialog').load("{% url calendar_create_event calendar_slug=calendar.slug %}?start="+iso_date_uri);
 			},
 			eventClick: function(calEvent, jsEvent) {
-				$('.edit_event_dialog').dialog('option', 'title', 'Edit Event')
-				$('.edit_event_dialog').dialog("open");
+				$('.event_dialog').dialog('option', 'title', 'Edit Event')
+				$('.event_dialog').dialog("open");
 				var iso_date = convert_iso(calEvent.start);
 				var iso_date_uri = escape(iso_date);
-				$('.edit_event_dialog').load("/schedule/occurrence/"+calEvent.id+"/"+iso_date_uri+"/edit/");
+				$('.event_dialog').load("/schedule/occurrence/"+calEvent.id+"/"+iso_date_uri+"/edit/");
 			}
 		});
 
 	});
 
 </script>
-	<div class="new_event_dialog"></div>
-	<div class="edit_event_dialog"></div>
+	<div class="event_dialog"></div>
 	<div class="calendar">
 	</div>
 </div>
