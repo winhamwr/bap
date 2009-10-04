@@ -1,11 +1,28 @@
 {% load pages_tags cache %}
-{% if children %}
-<ul>
-    {% for child in children %}
-        <li><a href="{% show_absolute_url child %} ">{% show_content child "title" %}</a></li>
-    {% endfor %}
-    <li><a href="{% url members %}">Member List</a></li>
-</ul>
+{% if not current_page.parent %}
+    <ul>
+    {% if not current_page.is_first_root %}
+        <li><a href="{% url home %}">Home</a></li>
+    {% endif %}
+    {% if children %}
+        {% for child in children %}
+            <li><a href="{% show_absolute_url child %} ">{% show_content child "title" %}</a></li>
+        {% endfor %}
+        <li><a href="{% url members %}">Member List</a></li>
+    {% else %}
+    &nbsp;
+    {% endif %}
+    </ul>
 {% else %}
-&nbsp;
+    <ul>
+        <li><a href="{% url home %}">Home</a></li>
+    {% if current_page.parent.get_children_for_frontend %}
+        {% for child in current_page.parent.get_children_for_frontend %}
+            <li><a href="{% show_absolute_url child %} ">{% show_content child "title" %}</a></li>
+        {% endfor %}
+        <li><a href="{% url members %}">Member List</a></li>
+    {% else %}
+    &nbsp;
+    {% endif %}
+    </ul>
 {% endif %}
