@@ -20,7 +20,7 @@
 </table>
 {% if occurrence.description %}
 <h3>Description</h3>
-<p>{{occurrence.description}}</p>
+<p>{{ occurrence.description }}</p>
 {% endif %}
-
+<p><a href="{% url attendance_attendance_view occurrence_id=occurrence.pk %}">Attendance</a></p>
 {% endblock %}

@@ -29,4 +29,7 @@ Groups
 ``BAP User Administrator``
 	* auth: group all, user add/change
 
+``BAP Event Attendance Admin``
+	* django_attendance: all
+
 

@@ -36,5 +36,9 @@ django-page-cms==1.0.6
 
 # Calendering
 -e git+git://github.com/winhamwr/django-schedule.git@fullcalendar#egg=schedule
+# Reservations
+-e git+git://github.com/winhamwr/django-reservations#egg=django_reservations
+# Attendance Tracking
+-e git+git://github.com/winhamwr/django-attendance#egg=django_attendance
 
 django-extensions==0.4.1

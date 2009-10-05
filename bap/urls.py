@@ -51,6 +51,7 @@ urlpatterns = patterns('',
     (r'^p/', include('pages.urls')),
 
     (r'^schedule/', include('schedule.urls')),
+    (r'^attendance/', include('django_attendance.urls')),
 )
 
 if settings.SERVE_MEDIA:

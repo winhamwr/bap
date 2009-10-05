@@ -164,6 +164,7 @@ INSTALLED_APPS = (
 
     # For calendering
     'schedule',
+    'django_attendance',
 )
 
 ABSOLUTE_URL_OVERRIDES = {

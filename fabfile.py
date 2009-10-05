@@ -38,10 +38,10 @@ def _push_files():
 @roles('webservers')
 def build_docs():
     with cd('/var/www/bap/docs'):
-        sudo('source /home/wes/.virtualenvs/bap/bin/activate && make html')
-        sudo('source /home/wes/.virtualenvs/bap/bin/activate && make latex')
+        sudo('source /home/wes/.virtualenvs/bap/bin/activate && make html --silent')
+        sudo('source /home/wes/.virtualenvs/bap/bin/activate && make latex --silent')
         with cd('_build/latex'):
-            sudo('source /home/wes/.virtualenvs/bap/bin/activate && make')
+            sudo('source /home/wes/.virtualenvs/bap/bin/activate && make --silent')
             sudo('mv IUBAPWebsite.pdf ../html/')
         sudo('chown www-data:bap -R _build')
         sudo('chmod u+rw,g+rw -R _build')
