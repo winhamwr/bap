@@ -22,6 +22,18 @@
     <script type="text/javascript" src="{{ MEDIA_URL }}schedule/js/fullcalendar.js"></script>
     <script type='text/javascript'>
 
+	convert_iso = function(d) {
+		var zeroPad = function(n) {
+			return (n < 10 ? '0' : '') + n;
+		}
+		return d.getUTCFullYear() +
+					"-" + zeroPad(d.getMonth() + 1) +
+					"-" + zeroPad(d.getDate()) +
+					"T" + zeroPad(d.getHours()) +
+					":" + zeroPad(d.getMinutes()) +
+					":" + zeroPad(d.getSeconds());
+	}
+
 	$(document).ready(function() {
 		$('.event_dialog').dialog({autoOpen: false, width: '380px'});
 
@@ -29,9 +41,12 @@
 			buttons: false,
 			events: '{% url calendar_events calendar_slug="professional-events" %}',
 			eventClick: function(calEvent, jsEvent) {
+				var iso_date = convert_iso(calEvent.start);
+				var iso_date_uri = escape(iso_date);
+
 				$('.event_dialog').dialog('option', 'title', 'Event')
 				$('.event_dialog').dialog("open");
-				$('.event_dialog').load("/schedule/event/"+calEvent.id+"/");
+				$('.event_dialog').load("/schedule/occurrence/"+calEvent.id+"/"+iso_date+"/");
 			}
 		});
 		$('.small_cal').fullCalendar('addEventSource', '{% url calendar_events calendar_slug="social-events" %}');
