@@ -22,7 +22,7 @@ Groups
 ------
 
 ``BAP Member``
-	BAP members are IU users that are actually members of the organization. Adding users to this group ensures that they appear on the :ref:`members-list` and that they're allowed to perform :ref:`event-sign-up`.  
+	BAP members are IU users that are actually members of the organization. Adding users to this group ensures that they appear on the :ref:`members-list` and that they're allowed to perform :ref:`event-sign-up`.
 
 ``BAP Faculty``
 	As the name emplies, associated faculty should be members of this group. They'll then appear in the :ref:`faculty-list`.
@@ -33,13 +33,16 @@ Groups
 ``BAP User Administrator``
 	Members of this group have permission to modify other users' accounts. It's important that only trusted and trained users have this ability. In order to actually make modification, the user must also have the ``staff`` box checked.
 
+``BAP Event Attendance Admin``
+	Users that should be able to manually modify event attendance, run attendance reports on other users and start the event signup page. These users must be marked as ``staff`` to manually alter the attendance record.
+
 User Passwords
 ==============
 
-Because user authentication is handled through the CAS system, the password settings via the user management pages don't actually do anything. The only way to change a password is for the user to handle the change via the IU user account system. 
+Because user authentication is handled through the CAS system, the password settings via the user management pages don't actually do anything. The only way to change a password is for the user to handle the change via the IU user account system.
 
 Access for People Without IU User Accounts
 ==========================================
 
-It's not currently well-supported, but it's possible for users without an IU account to gain access to the members section. To do this, create an account for the person and then set a password for them through the password change form. They'll then be able to login via the `Admin Login <http://iubap.org/admin>`_, after which, they'll be able to visit the home page and access members-only functionality. 
+It's not currently well-supported, but it's possible for users without an IU account to gain access to the members section. To do this, create an account for the person and then set a password for them through the password change form. They'll then be able to login via the `Admin Login <http://iubap.org/admin>`_, after which, they'll be able to visit the home page and access members-only functionality.
 
