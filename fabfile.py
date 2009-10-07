@@ -27,6 +27,7 @@ def deploy():
     sudo('chmod u+rw,g+rw -R %(project_root)s' % env)
 
     build_docs()
+    install_reqs()
 
 def _push_files():
     """
@@ -34,6 +35,12 @@ def _push_files():
     """
     put('bap/site_media/gblocks/beckerlogo.gif',
         '%(pinax_root)s/site_media/gblocks/beckerlogo.gif' % env)
+
+@roles('webservers')
+def install_reqs():
+    with cd('/var/www/bap'):
+        run('source /home/wes/.virtualenvs/bap/bin/activate && pip install -r requirements.txt')
+
 
 @roles('webservers')
 def build_docs():
