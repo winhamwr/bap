@@ -200,7 +200,7 @@ LOGIN_REDIRECT_URLNAME = "what_next"
 # CAS settings
 CAS_COMPLETELY_LOGOUT = True
 CAS_BASE = 'https://cas.iu.edu/cas/'
-CAS_SERVICE = 'http://bap.weswinham.com/cas/login/'
+CAS_SERVICE = 'http://iubap.org/cas/login/'
 CAS_NEXT_DEFAULT = '/'
 
 # Customized weird CAS settings
