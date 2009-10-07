@@ -22,5 +22,7 @@
 <h3>Description</h3>
 <p>{{ occurrence.description }}</p>
 {% endif %}
+{% if user.is_authenticated %}
 <p><a href="{% url attendance_attendance_view occurrence_id=occurrence.pk %}">Attendance</a></p>
+{% endif %}
 {% endblock %}
