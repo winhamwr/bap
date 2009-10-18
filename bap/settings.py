@@ -248,6 +248,12 @@ PAGE_TEMPLATES = (
 BAP_MEMBERS_GROUP_NAME = 'BAP Member'
 BAP_FACULTY_GROUP_NAME = 'BAP Faculty'
 
+# Settings for django-schedule
+# Function to check if a user can edit the given event
+def check_cal_edit_permission(ob, user):
+        return user.is_authenticated() and 'BAP Content Editor' in [g.name for g in user.groups.all()]
+CHECK_PERMISSION_FUNC = check_cal_edit_permission
+
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.
 try:
