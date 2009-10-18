@@ -1,0 +1,48 @@
+{% extends "basic_profiles/base.html" %}
+
+{% load i18n %}
+{% load pagination_tags %}
+{% load humanize %}
+{% load basic_profile_tags%}
+
+{% block head_title %}{% blocktrans %}All Profiles{% endblocktrans %}{% endblock %}
+
+{% block body %}
+    <h1>{% trans "Profiles" %}</h1>
+
+    <form method="GET" action="">
+        <input type="text" name="search" value="{{ search_terms }}" />
+        <input type="submit" value="Search Usernames" />
+        {% if search_terms %}
+            <a href="{% clear_search_url request %}">Clear Search Terms</a>
+        {% endif %}
+    </form>
+    <br />
+
+    {% if users %}
+        {% autopaginate users%}
+        <table class="data">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Graduation Year</th>
+                    <th>Resume</th>
+                </tr>
+            </thead>
+            <tbody>
+        {% for user in users %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.get_profile.name|default:user }}</td>
+                    <td>{{ user.get_profile.location|default:"" }}</td>
+                    <td>{{ user.get_profile.website|default:""|urlize }}</td>
+                </tr>
+        {% endfor %}
+            </tbody>
+        </table>
+        {% paginate %}
+       {% else %}
+           <p>No profile were found.</p>
+      {% endif %}
+{% endblock %}
