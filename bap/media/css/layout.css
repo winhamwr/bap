@@ -94,3 +94,7 @@ h2.full-calendar-title {
 .content_footer > p {
     margin-bottom: 0;
 }
+
+table.data td{
+    padding: .2em .2em .2em .2em;
+}

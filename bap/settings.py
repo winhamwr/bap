@@ -254,6 +254,9 @@ def check_cal_edit_permission(ob, user):
         return user.is_authenticated() and 'BAP Content Editor' in [g.name for g in user.groups.all()]
 CHECK_PERMISSION_FUNC = check_cal_edit_permission
 
+# django-attendance
+ATTENDANCE_HOUR_MULTIPLIER = 1.2 # 50 minutes is 1 hour
+
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.
 try:

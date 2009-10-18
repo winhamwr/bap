@@ -79,3 +79,11 @@ div.calendar {
 #footer, #footer a:link, #footer a:visited{
     color: #FFFFFF;
 }
+
+table.data {
+    width: 100%;
+    border: solid black 1px;
+}
+table.data td, table.data th {
+    border: solid black 1px;
+}
