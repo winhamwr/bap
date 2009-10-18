@@ -50,11 +50,11 @@
 				$('.event_dialog').load("{% url calendar_create_event calendar_slug=calendar.slug %}?start="+iso_date_uri);
 			},
 			eventClick: function(calEvent, jsEvent) {
-				$('.event_dialog').dialog('option', 'title', 'Edit Event')
+				$('.event_dialog').dialog('option', 'title', calEvent.title)
 				$('.event_dialog').dialog("open");
 				var iso_date = convert_iso(calEvent.start);
 				var iso_date_uri = escape(iso_date);
-				$('.event_dialog').load("/schedule/occurrence/"+calEvent.id+"/"+iso_date_uri+"/edit/");
+				$('.event_dialog').load("/schedule/occurrence/"+calEvent.id+"/"+iso_date_uri+"/");
 			}
 		});
 

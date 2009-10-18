@@ -5,11 +5,11 @@
 <h2 align="center">{{occurrence.title}}</h2>
 <table align="center">
 <tr>
-<td>Starts</td>
+<td>Starts: </td>
 <td>{% blocktrans with occurrence.start|date:_("DATETIME_FORMAT") as start_date %}{{ start_date }}{% endblocktrans %}</td>
 </tr>
 <tr>
-<td>Ends</td>
+<td>Ends: </td>
 <td>{% blocktrans with occurrence.end|date:_("DATETIME_FORMAT") as end_date %}{{ end_date }}{% endblocktrans %}</td>
 </tr>
 {% if occurrence.event.rule %}
@@ -23,6 +23,22 @@
 <p>{{ occurrence.description }}</p>
 {% endif %}
 {% if user.is_authenticated %}
-<p><a href="{% url attendance_attendance_view occurrence_id=occurrence.pk %}">Attendance</a></p>
+<p><a id="view_attendance" href='#' target="{% url attendance_attendance_view occurrence_id=occurrence.pk %}">Attendance</a></p>
+{% endif %}
+{% if perms.schedule.change_occurrence %}
+<p><a id="edit_occurrence" href="#" target="{% url edit_occurrence_by_iso_date event_id=occurrence.event.pk iso_date=occurrence.start|date:"Y-m-d\TH:i:s" %}">Edit</a></p>
 {% endif %}
 {% endblock %}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#edit_occurrence').click(function() {
+            $(this).parent().parent().load($(this).attr('target'));
+            return false;
+        });
+        $('#view_attendance').click(function() {
+            $(this).parent().parent().load($(this).attr('target'));
+            return false;
+        });
+    });
+</script>
