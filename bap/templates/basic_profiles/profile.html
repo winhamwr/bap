@@ -28,7 +28,6 @@
 
         {% if user.is_authenticated %}
             {% if is_me %}
-                <p><a href="{% url attendance_for_user user_id=user.pk %}">Attendance Summary</a></p>
                 <div class="form-toggle">
                     <p><span id="edit-profile-toggle">{% trans "Edit profile" %}</span></p>
 
