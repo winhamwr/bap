@@ -29,7 +29,10 @@
 	}
 	$(document).ready(function() {
 
-		$('.event_dialog').dialog({autoOpen: false, width: '580px'});
+		$('.event_dialog').dialog({autoOpen: false, width: '580px', modal: true});
+		$('.event_dialog').bind('dialogclose', function(event, ui){
+			$('calendar').fullCalendar('refetchEvents');
+		});
 
 		$('.calendar').fullCalendar({
 			draggable: true,
