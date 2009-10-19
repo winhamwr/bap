@@ -1,0 +1,26 @@
+{% extends "site_base.html" %}
+
+{% block extra_head %}
+{{ block.super }}
+<style type="text/css" media="screen">
+    #content {
+        width: 1080px;
+        margin: 0;
+        display: block;
+        float: none;
+        overflow: auto;
+    }
+</style>
+{% endblock %}
+
+{% block rtab_id %}id="attendance_tab"{% endblock %}
+
+{% block subnav %}
+<ul>
+    <li><a href="{% url attendance_mine %}">Your Attendance</a></li>
+    <li><a href="{% url attendance_by_user %}">Attendance By User</a></li>
+</ul>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

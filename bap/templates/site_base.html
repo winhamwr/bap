@@ -35,7 +35,7 @@
 	}
 
 	$(document).ready(function() {
-		$('.event_dialog').dialog({autoOpen: false, width: '380px'});
+		$('.event_dialog').dialog({autoOpen: false, width: '580px'});
 
 		$('.small_cal').fullCalendar({
 			buttons: false,
@@ -73,6 +73,7 @@
             <li id="tab_profile"><a href="{% url profile_detail user %}">{% trans "Profile" %}</a></li>
             <li id="tab_notices"><a href="{% url notification_notices %}">{% trans "Notices" %}{% if notice_unseen_count %} ({{ notice_unseen_count }}){% endif %}</a></li>
             <li id="tab_schedule"><a href="{% url schedule %}">{% trans "Schedule" %}</a></li>
+            <li id="tab_attendance"><a href="{% url attendance_mine %}">{% trans "Attendance" %}</a></li>
         {% endspaceless %}</ul>
     {% endif %}
 {% endblock %}
@@ -88,7 +89,7 @@
     {% gblock 1 for "generic_ads.LinkedImage" into "advert" %}
     <div><a href="{{ advert.url }}"><img src="{{ MEDIA_URL }}{{ advert.image }}" /></a></div>
 </div>
-{% block small_call %}
+{% block small_cal %}
 <div class="event_dialog"></div>
 <div class="small_cal">
 </div>
