@@ -28,6 +28,7 @@ Groups
 
 ``BAP User Administrator``
 	* auth: group all, user add/change
+	* Basic_Profiles: all
 
 ``BAP Event Attendance Admin``
 	* django_attendance: all
