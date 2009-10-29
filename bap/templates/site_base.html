@@ -38,7 +38,9 @@
 		$('.event_dialog').dialog({autoOpen: false, width: '580px'});
 
 		$('.small_cal').fullCalendar({
+			defaultView: 'basicWeek',
 			buttons: false,
+			columnFormat: 'ddd',
 			events: '{% url calendar_events calendar_slug="professional-events" %}',
 			eventClick: function(calEvent, jsEvent) {
 				var iso_date = convert_iso(calEvent.start);

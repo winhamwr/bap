@@ -203,3 +203,76 @@ div.weekday1 span.time {
 }
 
 #week div.occ span.title {font-size:12px;}
+
+/**** FORMS AND WIDGETS ****/
+
+div.time-picker {
+    position: absolute;
+    height: 200px;
+    width:80px; /* needed for IE */
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #000;
+    z-index: 9999;
+}
+
+div.time-picker-12hours {
+    width:6em; /* needed for IE */
+}
+
+div.time-picker ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.time-picker li {
+    padding: 1px;
+    cursor: pointer;
+}
+
+div.time-picker li.selected {
+    background: #316AC5;
+    color: #fff;
+}
+
+#id_start_1, #id_end_1 { width:80px;}
+
+/**** GENERAL SETTINGS ****/
+
+#demo {
+  border-color:#e0e0e0;
+  border-style:solid;
+  border-width: 0 3px 3px 0;
+  float:left;
+  padding-right:5px;
+}
+
+body, td {font-family:sans-serif;}
+
+.error {
+  border:1px solid red;
+}
+
+#messages {
+  position:absolute;
+  top:50px;
+}
+
+div.calendarname {
+  font-weight:bold;
+  margin:1em;
+  position:relative;
+}
+
+div.navigation {
+  text-align:center;
+}
+
+div.navigation a {
+  padding:0 20px;
+}
+
+div.tablewrapper {
+    text-align:center;
+}
