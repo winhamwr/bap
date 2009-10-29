@@ -33,4 +33,7 @@ Groups
 ``BAP Event Attendance Admin``
 	* django_attendance: all
 
+``BAP Event RSVP Admin``
+    * django_reservations: all
+
 

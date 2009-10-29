@@ -24,12 +24,11 @@
 {% endif %}
 {% if user.is_authenticated %}
 <p><a id="view_attendance" href='#' target="{% url attendance_attendance_view occurrence_id=occurrence.pk %}">Attendance</a></p>
+<p><a id="view_reservations" href='#' target="{% url reservations_reservations_view occurrence_id=occurrence.pk %}">Reservations</a></p>
 {% endif %}
 {% if perms.schedule.change_occurrence %}
 <p><a id="edit_occurrence" href="#" target="{% url edit_occurrence_by_iso_date event_id=occurrence.event.pk iso_date=occurrence.start|date:"Y-m-d\TH:i:s" %}">Edit</a></p>
 {% endif %}
-{% endblock %}
-
 <script type="text/javascript">
     $(document).ready(function() {
         $('#edit_occurrence').click(function() {
@@ -40,5 +39,11 @@
             $(this).parent().parent().load($(this).attr('target'));
             return false;
         });
+        $('#view_reservations').click(function() {
+            $(this).parent().parent().load($(this).attr('target'));
+            return false;
+        });
     });
 </script>
+{% endblock %}
+
