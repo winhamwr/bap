@@ -30,7 +30,7 @@
     padding: 0;
 }
 #content {
-    width: 768px;
+    width: 678px;
     padding: .5em .5em .5em .5em;
     float: left;
     clear: left;
@@ -50,7 +50,7 @@
 }
 
 #sidebar{
-    min-width: 350px;
+    width: 340px;
     float: right;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -69,7 +69,7 @@ div.calendar {
 }
 
 div.small_cal {
-    min-width: 280px;
+    width: 335px;
 }
 
 h2.full-calendar-title {

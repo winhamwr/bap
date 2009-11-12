@@ -5,3 +5,8 @@
     font-weight: bold;
     font-family: 'Gothic';
 }
+
+
+.fc-event a {
+	font-size: .75em !important;
+	}
