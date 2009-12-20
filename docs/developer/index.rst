@@ -11,6 +11,7 @@ This documentation is intended for developers that are extending the project and
 
     installation
     configuration
+    deployment
 
 * :ref:`genindex`
 * :ref:`modindex`
