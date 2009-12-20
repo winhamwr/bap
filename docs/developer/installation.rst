@@ -2,7 +2,7 @@
 Installation
 ************
 
-On a fresh ubuntu 9.04 box, install the following
+On a fresh ubuntu 9.10 box, install the following
 
 .. code-block:: bash
 
@@ -45,3 +45,8 @@ http://gist.github.com/106077
 .. code-block:: bash
 
     $ /var/www/bap/bap/manage.py syncdb
+
+10. For locally building documentation and running deployment, install the development tools.
+
+.. code-block:: bash
+    $ pip install -E ~/.virtualenvs/bap -r /var/www/bap/dev_requirements.txt
