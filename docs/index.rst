@@ -11,15 +11,16 @@ User documentation for the IU BAP Website
 
 A PDF version of this documentation can be found: `Here <IUBAPWebsite.pdf>`_
 
-.. note:: 
+.. note::
 
-    For technical documentation, see the :ref:`dev-docs-home` 
+    For technical documentation, see the :ref:`dev-docs-home`
 
 .. toctree::
     :maxdepth: 2
-    
+
     users
     pages
+    events
     advertisement
     announcements
     pages_tutorial
