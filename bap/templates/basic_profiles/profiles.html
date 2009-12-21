@@ -33,7 +33,7 @@
             <tbody>
         {% for user in users %}
                 <tr>
-                    <td>{{ user.username }}</td>
+                    <td><a href="{% url profile_detail username=user.username %}">{{ user.username }}</a></td>
                     <td>{{ user.get_profile.name|default:user }}</td>
                     <td>{{ user.get_profile.location|default:"" }}</td>
                     <td>{{ user.get_profile.website|default:""|urlize }}</td>
