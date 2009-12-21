@@ -11,11 +11,12 @@ On a fresh ubuntu 9.10 box, install the following
 
 1. Checkout the source to ``/var/www/bap``
 
-2. Setup the `Pinax <http://pinaxproject.com>`_ environment and active the `Virtual Environment <http://pypi.python.org/pypi/virtualenv>`_.
+2. Setup the `Pinax <http://pinaxproject.com>`_ version ``0.7 rc1`` environment and active the `Virtual Environment <http://pypi.python.org/pypi/virtualenv>`_.
 
 .. code-block:: bash
 
-    $ python /var/www/bap/pinax-boot.py --development ~/.virtualenvs/bap
+    $ wget http://github.com/pinax/pinax/blob/0.7rc1/scripts/pinax-boot.py
+    $ python pinax-boot.py --development ~/.virtualenvs/bap
     $ source ~/.virtualenvs/bap/bin/activate
 
 5. Get the external apps using `pip <http://pypi.python.org/pypi/pip>`_
