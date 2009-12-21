@@ -18,7 +18,6 @@ def deploy():
     sudo('mkdir -p %(project_root)s' % env)
     sudo('chown wes:bap -R %(project_root)s' % env)
     rsync_project(remote_dir='/var/www', exclude=['*.pyc', '.git', 'dev.db', '/bap/site_media'])
-    run("cd %(virtualenv)s/src/cas-consumer && git pull" % env)
     run("touch %(pinax_root)s/deploy/pinax.wsgi" % env)
 
     sudo('chown www-data:bap -R %(project_root)s' % env)
@@ -29,7 +28,7 @@ def deploy():
 
     # Build media
     with cd('/var/www/bap/bap'):
-        run('source /home/wes/.virtualenvs/bap/bin/activate && ./manage.py build_media --all')
+        sudo('source /home/wes/.virtualenvs/bap/bin/activate && ./manage.py build_media --all')
 
 @roles('webservers')
 def install_reqs():
