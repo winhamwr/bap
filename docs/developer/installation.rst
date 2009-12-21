@@ -7,7 +7,7 @@ On a fresh ubuntu 9.10 box, install the following
 .. code-block:: bash
 
     $ sudo apt-get install python-setuptools python-dev subversion git-core texlive texlive-latex-extra
-    $ sudo easy_install virtualenv virtualenvwrapper
+    $ sudo easy_install virtualenv virtualenvwrapper pip
 
 1. Checkout the source to ``/var/www/bap``
 
