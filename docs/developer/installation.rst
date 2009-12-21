@@ -45,6 +45,11 @@ http://gist.github.com/106077
 
 .. code-block:: bash
 
+    $ mysql -u root -p
+    mysql> CREATE DATABASE bap;
+    mysql> CREATE USER 'bap'@'localhost' IDENTIFIED BY 'Pass The CPA exam';
+    mysql> GRANT ALL on bap.* TO 'bap'@'localhost';
+    mysql> exit
     $ /var/www/bap/bap/manage.py syncdb
 
 10. For locally building documentation and running deployment, install the development tools.
