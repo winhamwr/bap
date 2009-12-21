@@ -33,7 +33,7 @@ odict
 
 # For CMS capability.
 # Taken from merging http://django-page-cms.googlecode.com/svn/trunk/requirements/external_apps.txt
-# and http://github.com/pinax/pinax/raw/1ac1630681f0b5a8d3e8e6911390dac0d3f087ee/requirements/0.7rc1/release.txt
+# and http://github.com/pinax/pinax/blob/0.7.1/requirements/0.7.1/release.txt
 django-mptt==0.3_pre
 django-tagging==0.3_pre
 html5lib>=0.10
