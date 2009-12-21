@@ -257,6 +257,7 @@ DEFAULT_PAGE_TEMPLATE = 'pages/base.html'
 PAGE_TEMPLATES = (
     ('pages/base.html', 'Standard Info Page'),
 )
+PAGES_MEDIA_URL = os.path.join(STATIC_URL, 'pages/')
 
 # Settings for the About members list
 BAP_MEMBERS_GROUP_NAME = 'BAP Member'
