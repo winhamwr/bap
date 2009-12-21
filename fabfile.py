@@ -17,24 +17,15 @@ def deploy():
     # sudo('ln -s /home/wes/.virtualenvs/bap/lib/python2.6/site-packages/django/contrib/admin/media /var/www/bap/bap/media/admin')
     sudo('mkdir -p %(project_root)s' % env)
     sudo('chown wes:bap -R %(project_root)s' % env)
-    rsync_project(remote_dir='/var/www', exclude=['*.pyc', '.git', 'dev.db'])
+    rsync_project(remote_dir='/var/www', exclude=['*.pyc', '.git', 'dev.db', '/bap/site_media/media'])
     run("cd %(virtualenv)s/src/cas-consumer && git pull" % env)
     run("touch %(pinax_root)s/deploy/pinax.wsgi" % env)
-
-    _push_files()
 
     sudo('chown www-data:bap -R %(project_root)s' % env)
     sudo('chmod u+rw,g+rw -R %(project_root)s' % env)
 
     build_docs()
     install_reqs()
-
-def _push_files():
-    """
-    Push files that aren't source, but need to be there anyway (the default advertisement).
-    """
-    put('bap/site_media/gblocks/beckerlogo.gif',
-        '%(pinax_root)s/site_media/gblocks/beckerlogo.gif' % env)
 
 @roles('webservers')
 def install_reqs():
