@@ -14,7 +14,7 @@ Members of the ``BAP Content Editor`` group are capable of creating and editing 
 Creating an Event
 -----------------
 
-To create a professional event, as an example, browse via :menuselection: `Schedule --> Professional Events -->` to the PE calendar. From there, simply click on the data you would like to place the event, and a menu will appear asking for relevant event information. After saving the event, you will need to reload the page and then it will appear on the calendar in the appropriate position. 
+To create a professional event, as an example, browse via :menuselection: `Schedule --> Professional Events -->` to the PE calendar. From there, simply click on the data you would like to place the event, and a menu will appear asking for relevant event information. After saving the event, you will need to reload the page and then it will appear on the calendar in the appropriate position.
 
 If you need to create a community or social event, simply select that calendar from the selection instead of the professional event calendar.
 
@@ -34,19 +34,19 @@ By default, there is no limit to the number of users who can RSVP for an event.
 
 Users can also view their and other peoples' reservations under the ``RSVPs`` tab.
 
-.. _attendance
+.. _attendance:
 
 Attendance
 ==========
 
-Members of the ``BAP Attendance Admin`` group are able to take attendance, modify attendance after the fact, and view attendance reports. The scheduled duration of an event is the number of hours that will be awarded for attendance, so to change the number of hours, simply modify the stop time for the event. 
+Members of the ``BAP Attendance Admin`` group are able to take attendance, modify attendance after the fact, and view attendance reports. The scheduled duration of an event is the number of hours that will be awarded for attendance, so to change the number of hours, simply modify the stop time for the event.
 
 Taking Attendance
 -----------------
 
 While at the particular event that needs attendance, the attendance admin can login, via the event dialog, select ``Attendance`` and then click ``Event Signup`` to bring up the attendance signin form.
 
-The attendance admin can then allow attenders to use that laptop to sign in with their usernames and passwords to indicate that they attended. 
+The attendance admin can then allow attenders to use that laptop to sign in with their usernames and passwords to indicate that they attended.
 
 Modifying Attendance
 --------------------
@@ -56,7 +56,7 @@ The attendance admin can click the ``Modify Attendance`` link on the attendance 
 Attendance Reporting
 --------------------
 
-All users have the ability to view their and others' attendance. Both options are available from the ``Attendance`` tab. 
+All users have the ability to view their and others' attendance. Both options are available from the ``Attendance`` tab.
 
 Using Attendance Data in Excel
 ------------------------------
