@@ -1,0 +1,47 @@
+--- jquery.wymeditor.js	2010-02-03 00:31:26.000000000 -0500
++++ jquery.wymeditor.flash.js	2010-02-03 00:27:08.000000000 -0500
+@@ -1993,8 +1993,11 @@
+ 		"height",
+ 		"src",
+ 		"type",
++		"flashvars",
++		"pluginspage",
+ 		"width"
+-      ]
++      ],
++		"inside":"object"
+     },
+     "fieldset":
+     {
+@@ -3380,16 +3383,16 @@
+     this.block_tags = ["a", "abbr", "acronym", "address", "area", "b",
+     "base", "bdo", "big", "blockquote", "body", "button",
+     "caption", "cite", "code", "col", "colgroup", "dd", "del", "div",
+-    "dfn", "dl", "dt", "em", "embed", "fieldset", "form", "head", "h1", "h2",
++    "dfn", "dl", "dt", "em", "fieldset", "form", "head", "h1", "h2",
+     "h3", "h4", "h5", "h6", "html", "i", "ins",
+     "kbd", "label", "legend", "li", "map", "noscript",
+-    "object", "ol", "optgroup", "option", "p", "param", "pre", "q",
++    "object", "ol", "optgroup", "option", "p", "pre", "q",
+     "samp", "script", "select", "small", "span", "strong", "style",
+     "sub", "sup", "table", "tbody", "td", "textarea", "tfoot", "th",
+     "thead", "title", "tr", "tt", "ul", "var", "extends"];
+ 
+ 
+-    this.inline_tags = ["br", "hr", "img", "input"];
++    this.inline_tags = ["br", "hr", "img", "input", "embed", "param"];
+ 
+     return this;
+ };
+@@ -4101,8 +4104,9 @@
+     
+     //replace em by i and strong by bold
+     //(designMode issue)
+-    html = html.replace(/<em([^>]*)>/gi, "<i$1>")
+-      .replace(/<\/em>/gi, "</i>")
++	// Don't remove embed links, either
++    html = html.replace(/<em[^bed]([^>]*)>/gi, "<i$1>")
++      .replace(/<\/em[^bed]>/gi, "</i>")
+       .replace(/<strong([^>]*)>/gi, "<b$1>")
+       .replace(/<\/strong>/gi, "</b>");
+     

@@ -30,6 +30,11 @@ def deploy():
     with cd('/var/www/bap/bap'):
         sudo('source /home/wes/.virtualenvs/bap/bin/activate && ./manage.py build_media --all')
 
+    # Patch wymeditor
+    put('wymeditor_flash.patch', '/tmp/wymeditor_flash.patch')
+    with cd('/var/www/bap/bap/site_media/static/pages/wymeditor'):
+        run('patch jquery.wymeditor.js /tmp/wymeditor_flash.patch')
+
 @roles('webservers')
 def install_reqs():
     with cd('/var/www/bap'):
