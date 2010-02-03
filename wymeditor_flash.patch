@@ -1,24 +1,51 @@
---- jquery.wymeditor.js	2010-02-03 00:31:26.000000000 -0500
-+++ jquery.wymeditor.flash.js	2010-02-03 00:27:08.000000000 -0500
-@@ -1993,8 +1993,11 @@
- 		"height",
- 		"src",
- 		"type",
-+		"flashvars",
-+		"pluginspage",
- 		"width"
--      ]
+--- jquery.wymeditor.js	2010-02-03 00:40:43.000000000 -0500
++++ jquery.wymeditor.flash.js	2010-02-03 00:45:20.000000000 -0500
+@@ -2167,8 +2167,43 @@
+       },
+       "required":[
+       "name"
 +      ],
-+		"inside":"object"
++	"inside":"object"
++    },
++"embed":
++    {
++      "attributes":
++      [
++        "width",
++        "height",
++        "allowfullscreen",
++        "allowscriptaccess",
++        "wmode",
++	"flashvars",
++	"pluginspage",
++        "type",
++        "src"
++      ],
++          "inside":"object"
++    },
++"object":
++    {
++      "attributes":[
++      "archive",
++      "classid",
++      "codebase",
++      "codetype",
++      "data",
++      "declare",
++      "height",
++      "name",
++      "standby",
++      "type",
++      "usemap",
++      "width"
+       ]
      },
-     "fieldset":
++		
+     "30":"pre",
+     "q":
      {
-@@ -3380,16 +3383,16 @@
-     this.block_tags = ["a", "abbr", "acronym", "address", "area", "b",
-     "base", "bdo", "big", "blockquote", "body", "button",
-     "caption", "cite", "code", "col", "colgroup", "dd", "del", "div",
--    "dfn", "dl", "dt", "em", "embed", "fieldset", "form", "head", "h1", "h2",
-+    "dfn", "dl", "dt", "em", "fieldset", "form", "head", "h1", "h2",
+@@ -3371,13 +3406,13 @@
+     "dfn", "dl", "dt", "em", "fieldset", "form", "head", "h1", "h2",
      "h3", "h4", "h5", "h6", "html", "i", "ins",
      "kbd", "label", "legend", "li", "map", "noscript",
 -    "object", "ol", "optgroup", "option", "p", "param", "pre", "q",
@@ -33,13 +60,13 @@
  
      return this;
  };
-@@ -4101,8 +4104,9 @@
+@@ -4089,8 +4124,9 @@
      
      //replace em by i and strong by bold
      //(designMode issue)
 -    html = html.replace(/<em([^>]*)>/gi, "<i$1>")
 -      .replace(/<\/em>/gi, "</i>")
-+	// Don't remove embed links, either
++    // Also don't replace <embed> tags
 +    html = html.replace(/<em[^bed]([^>]*)>/gi, "<i$1>")
 +      .replace(/<\/em[^bed]>/gi, "</i>")
        .replace(/<strong([^>]*)>/gi, "<b$1>")
